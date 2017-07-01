@@ -1,4 +1,4 @@
-## big-data-analytics-project
+## Big-data-analytics-project
 
 This project aims to examine a relationship between the dependence of city revenue on fines/tickets and the potential
 effect on violent crimes. The idea was inspired by the Ferguson riots of 2014.
