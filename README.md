@@ -7,6 +7,9 @@ of their municipal revenue from tickets and fines. Many experts argued this redu
 of the local population in the police and overall city government. 
 Our objective is to see whether there may be a pattern in other parts of the country.
 
+Detailed description about our project can be found on our [project wiki page](https://github.com/x-surgical-x/big-data-analytics-project/wiki).
+
 ## Links to Data sets
-- [Fines Data](https://sunlightfoundation.com/2016/09/26/where-local-governments-are-paying-the-bills-with-police-fines/)
-- [FBI crimes Data](https://www.ucrdatatool.gov/Search/Crime/Local/RunCrimeOneYearofData.cfm)
+- [Fines Data for year 2013](https://sunlightfoundation.com/2016/09/26/where-local-governments-are-paying-the-bills-with-police-fines/)
+- [FBI Crimes Data](https://www.ucrdatatool.gov/Search/Crime/Local/RunCrimeOneYearofData.cfm)
+- [Stanford Open Policing Project](https://openpolicing.stanford.edu/data/)
