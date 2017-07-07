@@ -22,19 +22,25 @@ def main():
 
     driver.get(url)
     assert webpage_title in driver.title
+    # handle for window
+    main_window = driver.current_window_handle
 
     state_select_element = driver.find_element_by_id("state")
     all_options = state_select_element.find_elements_by_tag_name("option")
     for option in all_options:
         if LOGS_ENABLED:
             print("Value for {0} is {1}".format(option.text, option.get_attribute("value")))
-            
+
         state_name = option.text
         file_path = 'raw-data/' + state_name
 
         option.click()
         next_page_button = driver.find_element_by_name("NextPage")
-        next_page_button.click()
+        ActionChains(driver).key_down(Keys.COMMAND).click(next_page_button).key_up(Keys.COMMAND).perform()
+
+        # switch focus on current tab
+        current_tab = driver.window_handles[-1]
+        driver.switch_to.window(current_tab)
 
         # ----- Select agencies page -----
         # Selecting all agencies
@@ -59,7 +65,10 @@ def main():
         with open(file_path,'w') as handle:
             handle.write(data_table)
 
+        # closing current tab and switching back to main tab
+        driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + 'w')
         input('wait')
+        driver.switch_to.window(main_window)
 
 
 if __name__ == "__main__":
