@@ -1,3 +1,5 @@
+import os
+import time
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 
@@ -5,9 +7,13 @@ LOGS_ENABLED = False
 
 class Scraper:
     def __init__(self):
+        self.sleep_time = 3
         self.url = 'https://www.ucrdatatool.gov/Search/Crime/Local/RunCrimeOneYearofData.cfm'
         self.webpage_title = 'Uniform Crime Reporting Statistics'
         self.MAX_STATE_ID = 52
+        self.out_directory = 'raw-data/'
+        if not os.path.exists(self.out_directory):
+            os.makedirs(self.out_directory)
 
     def openBrowserWindow(self):
         self.driver = webdriver.Chrome()
@@ -22,11 +28,12 @@ class Scraper:
         state = self.driver.find_element_by_xpath("//select[@id='state']/option[@value='{0}']".format(state_id))
         state.click()
         state_name = state.text
-        file_path = 'raw-data/' + state_name
+        file_path = self.out_directory + state_name
         if LOGS_ENABLED:
             print("Value for {0} is {1}".format(state_name, state_id))
 
         next_page_button = self.driver.find_element_by_name("NextPage")
+        self.removePopUpAdd()
         next_page_button.click()
 
         return file_path
@@ -41,10 +48,13 @@ class Scraper:
         crime_group_select_element = Select(self.driver.find_element_by_id("groups"))
         for option in crime_group_select_element.options:
             crime_group_select_element.select_by_visible_text(option.text)
+            self.removePopUpAdd()
 
         #Selecting year 2013
         year_select = self.driver.find_element_by_xpath("//select[@id='year']/option[@value='2013']")
         year_select.click()
+
+        self.removePopUpAdd()
 
         next_page_button = self.driver.find_element_by_name("NextPage")
         next_page_button.click()
@@ -53,6 +63,10 @@ class Scraper:
         data_table = self.driver.find_element_by_xpath("//table[@title]").get_attribute('innerHTML')
         with open(file_path,'w') as handle:
             handle.write(data_table)
+
+    def removePopUpAdd(self):
+        if self.driver.find_elements_by_class_name('__acs'):
+            self.driver.execute_script("var elements = document.getElementsByClassName('__acs'); elements[0].parentNode.removeChild(elements[0]);")
 
     def run(self):
         for state_id in range(1,self.MAX_STATE_ID):
