@@ -1,0 +1,31 @@
+FBI Uniform Crime Reporting Statistics
+
+The FBI collects violent and property crime data from local and county police agencies, going back, in part, to
+the 1960s. They provide access to the statistics via their FBI UCR tool, found at https://www.ucrdatatool.gov/.
+The data can be exported in a number of formats, including CSV.
+I am working on a crawler to generate the tables for 2013 and export them for our processing.
+
+Agency                                            Text(String)
+State                                             Text(String)
+Months reporting                                  Number (Integer)
+Population coverage                               Number (Integer)
+Violent crime total                               Number (Integer)
+Murder and non-negligent manslaughter             Number (Integer)
+Legacy rape1                                      Number (Integer)
+Revised rape2                                     Number (Integer)
+Robbery                                           Number (Integer)
+Aggravated assault                                Number (Integer)
+Property crime total                              Number (Integer)
+Burglary                                          Number (Integer)
+Larceny-theft                                     Number (Integer)
+Motor vehicle theft                               Number (Integer)
+Violent Crime rate                                Number (Floating Point)
+Murder and non-negligent manslaughter rate        Number (Floating Point)
+Legacy rape rate1                                 Number (Floating Point)
+Revised rape rate2                                Number (Floating Point)
+Robbery rate                                      Number (Floating Point)
+Aggravated assault rate                           Number (Floating Point)
+Property crime rate                               Number (Floating Point)
+Burglary rate                                     Number (Floating Point)
+Larceny-theft rate                                Number (Floating Point)
+Motor vehicle theft rate                          Number (Floating Point)
