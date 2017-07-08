@@ -1,5 +1,8 @@
 import os
+import sys
+import csv
 import time
+from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 
@@ -11,9 +14,11 @@ class Scraper:
         self.url = 'https://www.ucrdatatool.gov/Search/Crime/Local/RunCrimeOneYearofData.cfm'
         self.webpage_title = 'Uniform Crime Reporting Statistics'
         self.MAX_STATE_ID = 52
-        self.out_directory = 'raw-data/'
+        self.out_directory = 'fbi-crime-data/'
         if not os.path.exists(self.out_directory):
             os.makedirs(self.out_directory)
+        with open('headers') as handle:
+            self.headers = handle.readlines()
 
     def openBrowserWindow(self):
         self.driver = webdriver.Chrome()
@@ -61,8 +66,8 @@ class Scraper:
 
     def scrape(self, file_path):
         data_table = self.driver.find_element_by_xpath("//table[@title]").get_attribute('innerHTML')
-        with open(file_path,'w') as handle:
-            handle.write(data_table)
+        html_doc = "<table>" + data_table + "</table>"
+        self.writeCSV(file_path, html_doc)
 
     def removePopUpAdd(self):
         if self.driver.find_elements_by_class_name('__acs'):
@@ -76,6 +81,18 @@ class Scraper:
             self.scrape(file_path)
             self.closeBrowserWindow()
 
+    def writeCSV(self, file_path, html_doc):
+        soup = BeautifulSoup(html_doc, 'html.parser')
+
+        with open(file_path+'.csv','w+') as handle:
+            output = csv.writer(handle)
+            output.writerow([header.strip() for header in self.headers])
+
+            for table in soup.find_all('table'):
+                for row in table.find_all('tr')[4:]:
+                    col = map(lambda cell: " ".join(cell.stripped_strings), row.find_all('td'))
+                    output.writerow(col)
+                output.writerow([])
 
 if __name__ == "__main__":
     Scraper().run()
