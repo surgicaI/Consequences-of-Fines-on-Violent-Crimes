@@ -1,0 +1,26 @@
+Schema:      2013 Census Extract on Fines and Taxes
+
+Source:      Sunlight Foundation
+
+Description: This is a CSV file containing info about population, fines/taxes
+             collected, and related ratios collected for ~3500
+             city/county governments; approximately 70% is county vs 30% city
+
+Note:        Fines and forfeits is not just a Census
+             category, but a common category for local government budgets,
+             typically available on local government websites
+===============================================================================
+
+place:            Text (String)
+state:            Text (String)
+population:       Number (Integer)
+local_govt_type:  Text (String): assert(“city” || “county”)
+fines_forfeits:   Number (Integer)
+total_tax:        Number (Integer)
+fines_to_tax:     Number (Floating Point)
+tax_per_capita:   Number (Floating Point)
+fines_per_capita: Number (Floating Point)
+
+Optional fields:
+property_tax:     Number (Integer)
+sales_tax:        Number (Integer)
