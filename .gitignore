@@ -101,5 +101,5 @@ ENV/
 .mypy_cache/
 academic-papers/
 del/
-fbi-crime-data/
+*.csv
 .DS_Store
