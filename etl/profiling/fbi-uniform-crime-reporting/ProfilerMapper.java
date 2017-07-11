@@ -2,6 +2,7 @@ import java.lang.Exception;
 import java.io.IOException;
 import java.lang.StringBuilder;
 import org.apache.commons.csv.*;
+import java.util.Iterator;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
@@ -19,8 +20,14 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
         CSVRecord record;
         try{
             parser = CSVParser.parse(line, CSVFormat.EXCEL);
-            record = parser.iterator().next();
-        }catch(Exception e){
+            Iterator<CSVRecord> iterator = parser.iterator();
+            if(iterator.hasNext())
+                record = iterator.next();
+            else{
+                //No such element exception
+                return;
+            }
+        }catch(IOException e){
             return;
         }
         String[] fields = line.split(",");
@@ -38,12 +45,10 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
             }
             String[] agency_fields = agency.toLowerCase().split("\\s+");
             new_key = state;
-            int index = 0;
             outerloop:
             for(String agency_field: agency_fields){
-                index++;
                 for(String match_token: match_tokens){
-                    if(agency_field.equalsIgnoreCase(match_token) || index > 2){
+                    if(agency_field.equalsIgnoreCase(match_token)){
                         break outerloop;
                     }
                 }
@@ -67,12 +72,10 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
             }
             String[] agency_fields = agency.toLowerCase().split("\\s+");
             new_key = state;
-            int index = 0;
             outerloop:
             for(String agency_field: agency_fields){
-                index++;
                 for(String match_token: match_tokens){
-                    if(agency_field.equalsIgnoreCase(match_token) || index > 2){
+                    if(agency_field.equalsIgnoreCase(match_token)){
                         break outerloop;
                     }
                 }
