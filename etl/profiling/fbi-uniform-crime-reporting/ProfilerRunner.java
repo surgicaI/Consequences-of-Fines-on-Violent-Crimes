@@ -1,3 +1,4 @@
+import java.io.IOException;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
@@ -22,6 +23,12 @@ public static void main(String[] args) throws Exception {
 
         job.setMapperClass(ProfilerMapper.class);
         job.setReducerClass(ProfilerReducer.class);
+
+        try{
+            job.addFileToClassPath(new Path("/user/ssg441/lib/commons-csv-1.4.jar"));
+        }catch(IOException e){
+            //do nothing
+        }
 
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);

@@ -1,5 +1,7 @@
+import java.lang.Exception;
 import java.io.IOException;
 import java.lang.StringBuilder;
+import org.apache.commons.csv.*;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
@@ -8,18 +10,29 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 public class ProfilerMapper extends Mapper<LongWritable, Text, Text, Text> {
 private static final int FBI_DATA_FIELDS = 24;
-private static final int ICPSR_DATA_FIELDS = 51;
 private static final String[] match_tokens = {"police", "county", "sherrif", "department", "dept", "city"};
 
 @Override
 public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
-        String[] fields = line.split(",",-1);
+        CSVParser parser;
+        CSVRecord record;
+        try{
+            parser = CSVParser.parse(line, CSVFormat.EXCEL);
+            record = parser.iterator().next();
+        }catch(Exception e){
+            return;
+        }
+        String[] fields = line.split(",");
         String new_key = "", new_value = "";
-        if(fields.length == FBI_DATA_FIELDS){
+        if(record.size()<=10){
+            System.out.println(line);
+            return;
+        }
+        if(record.size() <= FBI_DATA_FIELDS){
             new_value = "";
-            String agency = fields[0];
-            String state = fields[1].toUpperCase();
+            String agency = record.get(0);
+            String state = record.get(1).toUpperCase();
             if(state.equalsIgnoreCase("state")){
                 return;
             }
@@ -32,24 +45,23 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
                 for(String match_token: match_tokens){
                     if(agency_field.equalsIgnoreCase(match_token) || index > 2){
                         break outerloop;
-                    }else{
-                        new_key = new_key + "-" + agency_field;
                     }
                 }
+                new_key = new_key + "-" + agency_field;
             }
             StringBuilder sbStr = new StringBuilder();
             sbStr.append("data:");
-            for(int i=2; i<fields.length; i++){
+            for(int i=2; i<record.size(); i++){
                 if (i > 2)
                     sbStr.append(",");
-                sbStr.append(fields[i]);
+                sbStr.append(record.get(i));
             }
             new_value = sbStr.toString();
-        }else if(fields.length == ICPSR_DATA_FIELDS){
+        }else{
             new_value = "county:";
-            String state = fields[0].toUpperCase();
-            String county = fields[1].toLowerCase();
-            String agency = fields[2].toLowerCase();
+            String state = record.get(1).toUpperCase();
+            String county = record.get(2).toLowerCase();
+            String agency = record.get(3).toLowerCase();
             if(state.equalsIgnoreCase("state")){
                 return;
             }
@@ -62,15 +74,11 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
                 for(String match_token: match_tokens){
                     if(agency_field.equalsIgnoreCase(match_token) || index > 2){
                         break outerloop;
-                    }else{
-                        new_key = new_key + "-" + agency_field;
                     }
                 }
+                new_key = new_key + "-" + agency_field;
             }
             new_value += county;
-        }else{
-            // Some error in code or data
-            return;
         }
         context.write(new Text(new_key), new Text(new_value));
     }
