@@ -9,9 +9,9 @@
 - While compiling ProfilerMapper.java, csv jar has to be added to the java classpath using following command.
 - Commands:   
 ```
-javac -classpath \`yarn classpath\`:commons-csv-1.4.jar -d . ProfilerMapper.java
-javac -classpath \`yarn classpath\` -d . ProfilerReducer.java
-javac -classpath \`yarn classpath\`:. -d . ProfilerRunner.java
+javac -classpath `yarn classpath`:commons-csv-1.4.jar -d . ProfilerMapper.java
+javac -classpath `yarn classpath` -d . ProfilerReducer.java
+javac -classpath `yarn classpath`:. -d . ProfilerRunner.java
 
 jar -cvf fbi-data-etl.jar *.class
 
