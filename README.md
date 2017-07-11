@@ -12,4 +12,5 @@ Detailed description about our project can be found on our [project wiki page](h
 ## Links to Data sets
 - [Fines Data for year 2013](https://sunlightfoundation.com/2016/09/26/where-local-governments-are-paying-the-bills-with-police-fines/)
 - [FBI Crimes Data](https://www.ucrdatatool.gov/Search/Crime/Local/RunCrimeOneYearofData.cfm)
+- [Law Enforcement Agency Identifiers Data](http://www.icpsr.umich.edu/icpsrweb/NACJD/studies/4634?archive=NACJD&q=4634&permit%5B0%5D=AVAILABLE&x=29&y=20)
 - [Stanford Open Policing Project](https://openpolicing.stanford.edu/data/)
