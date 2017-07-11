@@ -55,11 +55,9 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
                 new_key = new_key + "-" + agency_field;
             }
             StringBuilder sbStr = new StringBuilder();
-            sbStr.append("data:");
+            sbStr.append("data:"+agency.replace(","," "));
             for(int i=2; i<record.size(); i++){
-                if (i > 2)
-                    sbStr.append(",");
-                sbStr.append(record.get(i));
+                sbStr.append(",").append(record.get(i).replace(",",""));
             }
             new_value = sbStr.toString();
         }else{

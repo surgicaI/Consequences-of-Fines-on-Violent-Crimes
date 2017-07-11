@@ -37,7 +37,7 @@ public class ProfilerReducer extends Reducer<Text, Text, Text, Text> {
         }
         if(num_values == 2 && !data.isEmpty()) {
             resultBuilder.append(county).append(separater);
-            resultBuilder.append(agency).append(separater);
+            // resultBuilder.append(agency).append(separater);
             resultBuilder.append(data);
             context.write(new Text(state), new Text(resultBuilder.toString()));
         }else if(num_values > 2 && !data.isEmpty()) {
