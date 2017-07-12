@@ -9,7 +9,7 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
-public class ProfilerMapper extends Mapper<LongWritable, Text, Text, Text> {
+public class FBIDataETLMapper extends Mapper<LongWritable, Text, Text, Text> {
 private static final int FBI_DATA_FIELDS = 24;
 private static final String[] match_tokens = {"police", "county", "sherrif", "department", "dept", "city"};
 
