@@ -1,0 +1,172 @@
+county_name-essex county	206
+driver_age-60.0	679
+driver_age-71.0	233
+driver_age-82.0	60
+driver_age-93.0	3
+search_type-consent search - probable cause	536
+search_type-warrant	38
+stops at hour 01	1457
+stops at hour 12	1945
+stops at hour 23	2803
+contraband_found-true	574
+driver_age-50.0	1082
+driver_age-61.0	604
+driver_age-72.0	206
+driver_age-83.0	42
+driver_age-94.0	2
+driver_gender-nodata	418
+stops at hour 02	552
+stops at hour 13	2621
+driver_age-40.0	869
+driver_age-51.0	1057
+driver_age-62.0	630
+driver_age-73.0	179
+driver_age-84.0	43
+driver_age-95.0	1
+stop_outcome-nodata	500
+stops at hour 03	201
+stops at hour 14	3407
+driver_age-30.0	1340
+driver_age-41.0	923
+driver_age-52.0	1017
+driver_age-63.0	477
+driver_age-74.0	142
+driver_age-85.0	28
+driver_age-96.0	4
+driver_race-white	53919
+is_arrested-true	687
+search_conducted-false	56418
+stops at hour 04	76
+stops at hour 15	4033
+driver_age-20.0	1796
+driver_age-31.0	1292
+driver_age-42.0	940
+driver_age-53.0	1008
+driver_age-64.0	469
+driver_age-75.0	143
+driver_age-86.0	24
+stops at hour 05	126
+stops at hour 16	3590
+county_name-grand isle county	140
+driver_age-21.0	1811
+driver_age-32.0	1169
+driver_age-43.0	1054
+driver_age-54.0	927
+driver_age-65.0	458
+driver_age-76.0	115
+driver_age-87.0	30
+stops at hour 06	500
+stops at hour 17	4451
+violation-equipment	11339
+driver_age-22.0	2017
+driver_age-33.0	1166
+driver_age-44.0	1032
+driver_age-55.0	829
+driver_age-66.0	412
+driver_age-77.0	93
+driver_age-88.0	16
+driver_age-99.0	1
+stops at hour 07	1433
+stops at hour 18	5368
+driver_age-23.0	1970
+driver_age-34.0	1061
+driver_age-45.0	961
+driver_age-56.0	861
+driver_age-67.0	410
+driver_age-78.0	78
+driver_age-89.0	11
+stops at hour 08	2896
+stops at hour 19	3522
+violation-other	2013
+county_name-bennington county	4544
+driver_age-24.0	1763
+driver_age-35.0	1010
+driver_age-46.0	955
+driver_age-57.0	802
+driver_age-68.0	291
+driver_age-79.0	92
+search_type-nodata	56418
+stops at hour 09	3314
+county_name-lamoille county	1632
+driver_age-25.0	1700
+driver_age-36.0	1064
+driver_age-47.0	988
+driver_age-58.0	695
+driver_age-69.0	288
+county_name-windsor county	8783
+driver_age-15.0	8
+driver_age-26.0	1637
+driver_age-37.0	900
+driver_age-48.0	986
+driver_age-59.0	688
+driver_race-other	69
+stop_outcome-arrest for violation	667
+stops in month 10	5051
+vehicle_type-nodata	57157
+driver_age-16.0	168
+driver_age-27.0	1455
+driver_age-38.0	952
+driver_age-49.0	1105
+driver_race-hispanic	566
+stops in 2013	57157
+stops in month 11	4925
+county_name-washington county	5402
+county_name-windham county	8139
+driver_age-17.0	719
+driver_age-28.0	1430
+driver_age-39.0	967
+stops in month 01	3843
+stops in month 12	4025
+driver_age-18.0	1146
+driver_age-29.0	1386
+stops in month 02	4183
+county_name-addison county	4083
+county_name-orange county	5527
+county_name-orleans county	1972
+driver_age-19.0	1610
+is_arrested-false	56470
+search_conducted-true	739
+stops in month 03	5710
+driver_age-nodata	133
+stops in month 04	4429
+violation-dui	175
+contraband_found-false	56575
+driver_gender-f	20565
+stops	283285
+stops in month 05	5850
+bad-row	1007
+driver_race-nodata	774
+stops in month 06	4499
+stops in month 07	5239
+stops in month 08	5087
+county_name-caledonia county	3237
+stops in month 09	4316
+violation-nodata	499
+drugs_related_stop-nodata	57157
+search_type-consent search - reasonable suspicion	165
+driver_gender-m	36174
+county_name-nodata	48
+driver_race-black	1095
+county_name-chittenden county	5255
+county_name-rutland county	4092
+stop_outcome-written warning	37038
+violation-moving violation	43131
+county_name-franklin county	4097
+driver_age-90.0	9
+out_of_state-nodata	57157
+stop_outcome-verbal warning	2
+stops at hour 20	2459
+contraband_found-nodata	8
+driver_age-80.0	76
+driver_age-91.0	6
+driver_race-asian	734
+stop_outcome-citation	18930
+stops at hour 10	2794
+stops at hour 21	2488
+driver_age-70.0	274
+driver_age-81.0	78
+driver_age-92.0	1
+stop_outcome-warrant arrest	20
+stops at hour 00	2319
+stops at hour 11	2150
+stops at hour 22	2652

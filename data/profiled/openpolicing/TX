@@ -1,0 +1,369 @@
+county_name-castro county	2958
+county_name-delta county	525
+county_name-edwards county	202
+county_name-falls county	2901
+county_name-hamilton county	918
+county_name-hood county	11138
+county_name-lampasas county	3880
+county_name-mclennan county	12263
+county_name-nolan county	6181
+county_name-sherman county	2495
+county_name-throckmorton county	257
+county_name-upton county	678
+county_name-ward county	2571
+county_name-young county	5677
+is_arrested-nodata	1565231
+search_conducted-safe movement"	2753
+search_conducted-stop sign/light"	575
+stops at hour 01	27071
+stops at hour 12	71456
+stops at hour 23	61644
+contraband_found-true	5653
+county_name-angelina county	9243
+county_name-bosque county	4116
+county_name-jones county	2951
+county_name-liberty county	8562
+county_name-martin county	2506
+county_name-mills county	1804
+county_name-rusk county	7659
+driver_gender-nodata	168
+search_conducted-license	2
+search_conducted-license"	416
+stops at hour 02	14147
+stops at hour 13	101692
+county_name-austin county	7433
+county_name-brown county	5351
+county_name-burleson county	3287
+county_name-hidalgo county	47610
+county_name-kerr county	5678
+county_name-shackelford county	1427
+stop_outcome-nodata	3
+stops at hour 03	4918
+stops at hour 14	116604
+county_name-coleman county	2371
+county_name-hall county	773
+county_name-hansford county	660
+county_name-jim hogg county	2238
+county_name-ochiltree county	2329
+county_name-parmer county	2482
+county_name-tom green county	6534
+driver_race-white	897499
+search_conducted-false	1547710
+stops at hour 04	4205
+stops at hour 15	110795
+county_name-brooks county	3282
+county_name-dawson county	2557
+county_name-floyd county	217
+county_name-haskell county	2309
+county_name-leon county	7431
+county_name-terrell county	24
+county_name-tyler county	5247
+county_name-wilson county	5586
+county_name-yoakum county	631
+search_conducted-other (non-mapped)"	684
+stops at hour 05	14596
+stops at hour 16	111693
+violation-"paperwork	3907
+violation-speeding	933152
+county_name-armstrong county	2655
+county_name-bastrop county	14164
+county_name-jackson county	2689
+county_name-jim wells county	8759
+county_name-kaufman county	13240
+county_name-king county	404
+county_name-midland county	6577
+county_name-parker county	22593
+county_name-waller county	7504
+search_conducted-lights"	1334
+search_conducted-paperwork"	698
+stop_outcome-true	354
+stop_outcome-warning	1149790
+stops at hour 06	33234
+stops at hour 17	106912
+violation-equipment	31579
+county_name-bailey county	2107
+county_name-coryell county	4334
+county_name-henderson county	9078
+county_name-pecos county	5540
+county_name-walker county	10677
+search_type-false	3
+stops at hour 07	65750
+stops at hour 18	86310
+violation-lights	142054
+contraband_found-consent	366
+county_name-baylor county	1139
+county_name-chambers county	17812
+county_name-collingsworth county	279
+county_name-hockley county	4285
+county_name-kendall county	2510
+county_name-navarro county	6214
+county_name-roberts county	796
+county_name-wharton county	6415
+is_arrested-warning	10074
+search_conducted-speeding"	14148
+stops at hour 08	76677
+stops at hour 19	71100
+violation-other	33358
+violation-other (non-mapped)	29788
+county_name-duval county	1796
+county_name-glasscock county	586
+county_name-limestone county	3219
+county_name-robertson county	3523
+county_name-scurry county	3637
+search_type-nodata	1572156
+stops at hour 09	82783
+violation-"license	8891
+contraband_found-inventory	125
+county_name-childress county	3175
+county_name-dewitt county	2616
+county_name-ellis county	8140
+county_name-grayson county	8982
+county_name-hays county	12193
+county_name-hunt county	11448
+county_name-newton county	4444
+county_name-nueces county	11798
+county_name-shelby county	5694
+county_name-stonewall county	1068
+violation-"safe movement	2508
+county_name-calhoun county	3048
+county_name-callahan county	5060
+county_name-cochran county	185
+county_name-comanche county	2278
+county_name-fort bend county	22183
+county_name-frio county	8880
+county_name-guadalupe county	15907
+county_name-hale county	5308
+county_name-houston county	2577
+county_name-kinney county	2500
+county_name-lubbock county	8504
+county_name-reeves county	1975
+driver_race-other	4530
+stops in month 10	113075
+vehicle_type-nodata	1590499
+violation-registration/plates	169174
+contraband_found-probable cause	313
+county_name-collin county	21117
+county_name-presidio county	3279
+county_name-somervell county	3647
+driver_race-hispanic	452040
+search_conducted-nodata	5
+stops in 2013	1590499
+stops in month 11	111207
+county_name-brewster county	2242
+county_name-comal county	9891
+county_name-dimmit county	1627
+county_name-hardin county	6044
+county_name-hopkins county	8279
+county_name-lee county	4748
+county_name-mcculloch county	3506
+county_name-medina county	9846
+county_name-san jacinto county	9212
+county_name-washington county	3475
+stop_outcome-false	24911
+stops in month 01	146127
+stops in month 12	132508
+county_name-dallas county	16380
+county_name-loving county	13
+county_name-montgomery county	40641
+county_name-refugio county	3862
+county_name-rockwall county	3485
+county_name-san patricio county	11384
+county_name-trinity county	953
+county_name-williamson county	20015
+stops in month 02	135138
+violation-"seat belt	203
+county_name-anderson county	9968
+county_name-cherokee county	10667
+county_name-foard county	95
+county_name-jefferson county	17395
+county_name-motley county	128
+county_name-orange county	9582
+county_name-stephens county	579
+county_name-webb county	14373
+county_name-winkler county	377
+is_arrested-false	3
+search_conducted-true	17516
+stops in month 03	146893
+contraband_found-incident to arrest	27
+county_name-brazos county	12210
+county_name-crane county	556
+county_name-gaines county	1819
+county_name-gonzales county	10789
+county_name-lamar county	6615
+county_name-lynn county	2279
+county_name-oldham county	4143
+county_name-runnels county	1993
+county_name-san saba county	314
+county_name-upshur county	7330
+county_name-uvalde county	3409
+county_name-wood county	7637
+driver_age-nodata	1590499
+search_conducted-registration/plates"	3666
+stops in month 04	132944
+violation-dui	12014
+contraband_found-false	1559573
+county_name-erath county	8550
+county_name-kimble county	1847
+county_name-knox county	1481
+county_name-la salle county	5373
+county_name-morris county	3258
+county_name-potter county	9063
+county_name-sabine county	3275
+county_name-terry county	3050
+county_name-wheeler county	3676
+driver_gender-f	531602
+stops	23397249
+stops in month 05	130313
+bad-row	6033660
+county_name-aransas county	3640
+county_name-johnson county	14355
+county_name-swisher county	2444
+driver_race-nodata	56487
+stops in month 06	126328
+county_name-andrews county	1528
+county_name-bexar county	13487
+county_name-bowie county	9720
+county_name-crosby county	802
+county_name-el paso county	22376
+county_name-lamb county	3930
+county_name-marion county	3204
+county_name-matagorda county	4412
+county_name-nacogdoches county	12974
+county_name-schleicher county	859
+search_conducted-other"	178
+stops in month 07	139733
+county_name-colorado county	7986
+county_name-dallam county	3052
+county_name-deaf smith county	3224
+county_name-hartley county	5020
+county_name-val verde county	3410
+county_name-willacy county	10024
+stops in month 08	149078
+county_name-borden county	58
+county_name-concho county	1516
+county_name-eastland county	7800
+county_name-goliad county	1458
+county_name-mitchell county	3291
+search_conducted-equipment"	2
+stops in month 09	127155
+violation-"speeding	40
+violation-nodata	773
+violation-paperwork	2843
+county_name-mcmullen county	1256
+county_name-panola county	6731
+county_name-smith county	24474
+county_name-zavala county	2066
+drugs_related_stop-nodata	1590499
+search_type-probable cause	5578
+violation-"equipment	1684
+county_name-bee county	5272
+county_name-coke county	112
+county_name-denton county	15933
+county_name-kenedy county	880
+county_name-llano county	2704
+county_name-reagan county	1171
+violation-"lights	2646
+county_name-cottle county	435
+county_name-fisher county	927
+county_name-galveston county	9103
+county_name-hudspeth county	6391
+county_name-live oak county	6324
+county_name-zapata county	2744
+driver_gender-m	1058729
+violation-"other	667
+violation-"other (non-mapped)	1194
+county_name-brazoria county	23182
+county_name-caldwell county	5162
+county_name-moore county	5356
+county_name-palo pinto county	7634
+county_name-starr county	15454
+county_name-sterling county	1893
+county_name-wise county	17833
+violation-license	9445
+county_name-archer county	4437
+county_name-bandera county	4047
+county_name-bell county	20701
+county_name-blanco county	2670
+county_name-briscoe county	158
+county_name-garza county	3078
+county_name-gray county	4180
+county_name-harris county	36069
+county_name-howard county	3679
+county_name-irion county	908
+county_name-nodata	45
+county_name-rains county	2363
+county_name-taylor county	9224
+county_name-wichita county	7682
+driver_race-black	149449
+search_type-incident to arrest	795
+violation-safe movement	138801
+violation-stop sign/light	23906
+county_name-fayette county	6661
+county_name-harrison county	17527
+county_name-mason county	1966
+county_name-maverick county	7899
+violation-"registration/plates	3013
+county_name-camp county	1857
+county_name-clay county	7621
+county_name-cooke county	11352
+county_name-culberson county	5864
+county_name-dickens county	694
+county_name-hemphill county	1179
+county_name-hill county	8050
+county_name-hutchinson county	1935
+county_name-jasper county	17246
+county_name-lipscomb county	245
+county_name-red river county	3387
+county_name-san augustine county	1404
+county_name-sutton county	3400
+county_name-titus county	8744
+county_name-fannin county	3028
+county_name-gillespie county	4275
+county_name-hardeman county	2408
+county_name-karnes county	4072
+county_name-kent county	140
+county_name-kleberg county	6446
+county_name-milam county	5861
+county_name-randall county	12033
+is_arrested-citation	15191
+search_conducted-seat belt"	811
+county_name-atascosa county	10375
+county_name-cameron county	27814
+county_name-franklin county	4334
+county_name-jack county	3678
+county_name-victoria county	8599
+county_name-wilbarger county	6270
+out_of_state-nodata	1590499
+search_conducted-lights	1
+search_type-consent	8523
+stops at hour 20	70148
+violation-seat belt	38344
+contraband_found-nodata	24442
+county_name-burnet county	9753
+county_name-carson county	8187
+county_name-cass county	7693
+county_name-gregg county	11275
+county_name-jeff davis county	1309
+county_name-lavaca county	2550
+county_name-montague county	8041
+county_name-polk county	6292
+county_name-real county	576
+county_name-tarrant county	1993
+county_name-van zandt county	12697
+driver_race-asian	30494
+stop_outcome-citation	415441
+stops at hour 10	90820
+stops at hour 21	78492
+county_name-crockett county	4077
+county_name-donley county	5613
+county_name-ector county	5090
+county_name-freestone county	4514
+county_name-grimes county	4463
+county_name-madison county	2503
+county_name-menard county	749
+county_name-travis county	22998
+search_type-inventory	3444
+stops at hour 00	43702
+stops at hour 11	70788
+stops at hour 22	74962
+violation-"dui	515

@@ -1,0 +1,132 @@
+stops at hour 01	3683
+stops at hour 12	25119
+stops at hour 23	9652
+vehicle_year-1984	419
+vehicle_year-1995	6543
+vehicle_year-2006	31418
+contraband_found-true	3256
+driver_gender-nodata	1
+stops at hour 02	2845
+stops at hour 13	28720
+vehicle_year-1985	634
+vehicle_year-1996	7250
+vehicle_year-2007	32760
+stop_outcome-nodata	51
+stops at hour 03	2137
+stops at hour 14	30482
+vehicle_year-1986	827
+vehicle_year-1997	9251
+vehicle_year-2008	25085
+driver_race-white	259424
+is_arrested-true	6389
+search_conducted-false	416599
+stops at hour 04	1895
+stops at hour 15	27776
+vehicle_year-1987	909
+vehicle_year-1998	11129
+vehicle_year-2009	16424
+stop_outcome-field interview	10968
+stops at hour 05	5970
+stops at hour 16	27856
+vehicle_year-1988	1137
+vehicle_year-1999	14152
+violation-speeding	98006
+county_name-gila county	13450
+stop_outcome-warning	170695
+stops at hour 06	13982
+stops at hour 17	27350
+vehicle_year-1989	1561
+violation-equipment	2791
+stops at hour 07	22699
+stops at hour 18	22474
+violation-lights	51
+stops at hour 08	27032
+stops at hour 19	18006
+vehicle_year-nodata	8050
+violation-other	25445
+county_name-coconino county	25978
+search_type-nodata	428549
+stops at hour 09	26032
+driver_race-other	28647
+stops in month 10	37697
+violation-registration/plates	4420
+driver_race-hispanic	109997
+search_conducted-nodata	1
+stops in 2013	431207
+stops in month 11	21289
+county_name-yuma county	13099
+stops in month 01	41261
+stops in month 12	40356
+stops in month 02	34646
+county_name-apache county	8823
+county_name-cochise county	22188
+is_arrested-false	424818
+search_conducted-true	14607
+stops in month 03	36831
+county_name-pima county	40441
+driver_age-nodata	431207
+stop_time-nodata	1
+stops in month 04	34670
+violation-dui	2247
+contraband_found-false	427951
+driver_gender-f	130238
+stops	2251992
+stops in month 05	40207
+bad-row	151136
+driver_race-nodata	1
+stops in month 06	33182
+county_name-mohave county	21530
+stop_outcome-repair order	38692
+stops in month 07	36119
+county_name-greenlee county	1047
+county_name-yavapai county	30243
+stops in month 08	39975
+county_name-maricopa county	122222
+stops in month 09	34974
+violation-nodata	265265
+violation-paperwork	8393
+county_name-santa cruz county	8155
+drugs_related_stop-nodata	431207
+driver_gender-m	300968
+stop_outcome-information only	356
+county_name-pinal county	36287
+violation-license	5430
+county_name-navajo county	19510
+county_name-nodata	53393
+driver_race-black	23226
+vehicle_year-2010	18729
+violation-safe movement	4862
+violation-stop sign/light	1946
+vehicle_year-2000	17771
+vehicle_year-2011	21607
+vehicle_year-1990	1774
+vehicle_year-2001	18886
+vehicle_year-2012	34624
+stop_outcome-arrest	6389
+vehicle_year-1980	164
+vehicle_year-1991	2259
+vehicle_year-2002	18995
+vehicle_year-2013	38386
+violation-moving violation	12351
+out_of_state-nodata	431207
+search_type-consent	2658
+stops at hour 20	19166
+vehicle_year-1981	183
+vehicle_year-1992	2693
+vehicle_year-2003	21561
+vehicle_year-2014	4503
+county_name-graham county	6026
+county_name-la paz county	8815
+driver_race-asian	9912
+stop_outcome-citation	204056
+stops at hour 10	26409
+stops at hour 21	19792
+vehicle_year-1982	253
+vehicle_year-1993	3610
+vehicle_year-2004	24504
+stops at hour 00	4347
+stops at hour 11	22121
+stops at hour 22	15661
+vehicle_year-1983	269
+vehicle_year-1994	5120
+vehicle_year-2005	27767

@@ -1,0 +1,159 @@
+driver_age-60.0	357
+driver_age-71.0	79
+driver_age-82.0	21
+driver_age-93.0	3
+is_arrested-nodata	759
+stops at hour 01	1773
+stops at hour 12	1221
+stops at hour 23	1794
+contraband_found-true	183
+driver_age-50.0	670
+driver_age-61.0	233
+driver_age-72.0	80
+driver_age-83.0	28
+driver_age-94.0	1
+stops at hour 02	1059
+stops at hour 13	1271
+county_name-fairfield county	3968
+driver_age-40.0	701
+driver_age-51.0	498
+driver_age-62.0	230
+driver_age-73.0	75
+driver_age-84.0	13
+stop_outcome-nodata	759
+stops at hour 03	459
+stops at hour 14	1421
+driver_age-30.0	929
+driver_age-41.0	533
+driver_age-52.0	481
+driver_age-63.0	248
+driver_age-74.0	62
+driver_age-85.0	9
+driver_race-white	26496
+is_arrested-true	881
+search_conducted-false	32499
+stop_outcome-ticket	19097
+stops at hour 04	254
+stops at hour 15	1404
+county_name-new london county	4987
+driver_age-20.0	1002
+driver_age-31.0	781
+driver_age-42.0	670
+driver_age-53.0	557
+driver_age-64.0	231
+driver_age-75.0	71
+driver_age-86.0	7
+stops at hour 05	516
+stops at hour 16	1759
+violation-speeding	11005
+driver_age-21.0	1113
+driver_age-32.0	833
+driver_age-43.0	740
+driver_age-54.0	517
+driver_age-65.0	250
+driver_age-76.0	45
+driver_age-87.0	7
+stops at hour 06	1067
+stops at hour 17	1819
+violation-equipment	328
+county_name-hartford county	3464
+driver_age-22.0	1113
+driver_age-33.0	850
+driver_age-44.0	639
+driver_age-55.0	541
+driver_age-66.0	159
+driver_age-77.0	35
+driver_age-88.0	9
+driver_age-99.0	3
+stops at hour 07	1243
+stops at hour 18	1515
+violation-lights	1982
+county_name-middlesex county	3761
+driver_age-23.0	1294
+driver_age-34.0	707
+driver_age-45.0	823
+driver_age-56.0	508
+driver_age-67.0	129
+driver_age-78.0	43
+driver_age-89.0	3
+stops at hour 08	1420
+stops at hour 19	1443
+violation-other	8388
+driver_age-24.0	1054
+driver_age-35.0	804
+driver_age-46.0	543
+driver_age-57.0	368
+driver_age-68.0	131
+driver_age-79.0	22
+search_type-nodata	32585
+stops at hour 09	1675
+driver_age-25.0	1127
+driver_age-36.0	599
+driver_age-47.0	561
+driver_age-58.0	344
+driver_age-69.0	92
+driver_age-15.0	5
+driver_age-26.0	943
+driver_age-37.0	520
+driver_age-48.0	590
+driver_age-59.0	279
+driver_race-other	16
+stops in month 10	12528
+vehicle_type-nodata	33077
+violation-registration/plates	3932
+driver_age-16.0	63
+driver_age-27.0	942
+driver_age-38.0	554
+driver_age-49.0	540
+driver_race-hispanic	2779
+stops in 2013	33077
+stops in month 11	11623
+county_name-windham county	3346
+driver_age-17.0	280
+driver_age-28.0	932
+driver_age-39.0	529
+stops in month 12	8926
+driver_age-18.0	553
+driver_age-29.0	778
+driver_age-19.0	763
+is_arrested-false	31437
+search_conducted-true	578
+driver_age-nodata	30
+stop_time-nodata	38
+contraband_found-false	32894
+driver_gender-f	11242
+stops	318669
+bad-row	139926
+county_name-new haven county	5121
+search_type-other	223
+drugs_related_stop-nodata	33077
+driver_gender-m	21835
+violation-license	361
+county_name-nodata	2
+driver_race-black	3786
+violation-cell phone	1581
+violation-safe movement	622
+violation-stop sign/light	1016
+stop_outcome-summons	1807
+county_name-tolland county	5577
+stop_outcome-arrest	881
+stop_outcome-written warning	4552
+violation-moving violation	3114
+driver_age-90.0	6
+out_of_state-nodata	33077
+search_type-consent	247
+stop_outcome-verbal warning	5981
+stops at hour 20	1659
+violation-seat belt	748
+county_name-litchfield county	2851
+driver_age-80.0	33
+driver_age-91.0	4
+stops at hour 10	1699
+stops at hour 21	1560
+driver_age-70.0	138
+driver_age-81.0	15
+driver_age-92.0	4
+search_type-inventory	22
+stops at hour 00	2088
+stops at hour 11	1602
+stops at hour 22	1318

@@ -1,0 +1,159 @@
+driver_age-60.0	224
+driver_age-71.0	53
+driver_age-82.0	5
+is_arrested-nodata	2764
+out_of_state-true	10385
+stops at hour 01	2228
+stops at hour 12	1605
+stops at hour 23	2812
+contraband_found-true	409
+driver_age-50.0	512
+driver_age-61.0	195
+driver_age-72.0	31
+driver_age-83.0	8
+driver_gender-nodata	2764
+stops at hour 02	1374
+stops at hour 13	2408
+driver_age-40.0	643
+driver_age-51.0	494
+driver_age-62.0	170
+driver_age-73.0	35
+driver_age-84.0	4
+stop_outcome-nodata	2764
+stops at hour 03	331
+stops at hour 14	2764
+driver_age-30.0	1330
+driver_age-41.0	621
+driver_age-52.0	475
+driver_age-63.0	166
+driver_age-74.0	19
+driver_age-85.0	6
+driver_race-white	28071
+is_arrested-true	1181
+search_conducted-false	43468
+stops at hour 04	52
+stops at hour 15	2412
+driver_age-20.0	1771
+driver_age-31.0	1214
+driver_age-42.0	669
+driver_age-53.0	415
+driver_age-64.0	129
+driver_age-75.0	19
+driver_age-86.0	4
+stops at hour 05	62
+stops at hour 16	1689
+violation-speeding	19446
+driver_age-21.0	1992
+driver_age-32.0	1128
+driver_age-43.0	694
+driver_age-54.0	438
+driver_age-65.0	133
+driver_age-76.0	25
+driver_age-87.0	3
+stop_outcome-warning	4156
+stops at hour 06	1823
+stops at hour 17	1350
+violation-equipment	7791
+driver_age-22.0	2070
+driver_age-33.0	1037
+driver_age-44.0	629
+driver_age-55.0	389
+driver_age-66.0	121
+driver_age-77.0	10
+driver_age-88.0	4
+driver_age-99.0	1
+stops at hour 07	2342
+stops at hour 18	1033
+driver_age-23.0	2162
+driver_age-34.0	905
+driver_age-45.0	600
+driver_age-56.0	350
+driver_age-67.0	89
+driver_age-78.0	17
+driver_age-89.0	2
+stops at hour 08	2369
+stops at hour 19	1483
+violation-other	1003
+driver_age-24.0	1994
+driver_age-35.0	856
+driver_age-46.0	621
+driver_age-57.0	352
+driver_age-68.0	68
+driver_age-79.0	11
+search_type-nodata	43468
+stops at hour 09	3262
+driver_age-25.0	1894
+driver_age-36.0	837
+driver_age-47.0	547
+driver_age-58.0	292
+driver_age-69.0	64
+driver_age-26.0	1707
+driver_age-37.0	749
+driver_age-48.0	552
+driver_age-59.0	268
+driver_race-other	48
+search_type-reasonable suspicion	82
+stops in month 10	3492
+vehicle_type-nodata	44427
+violation-registration/plates	1858
+driver_age-16.0	23
+driver_age-27.0	1637
+driver_age-38.0	707
+driver_age-49.0	509
+driver_race-hispanic	6128
+stops in 2013	44427
+stops in month 11	3654
+driver_age-17.0	228
+driver_age-28.0	1506
+driver_age-39.0	679
+stop_outcome-arrest driver	1012
+stop_outcome-n/d	256
+stops in month 01	4262
+stops in month 12	3467
+driver_age-18.0	683
+driver_age-29.0	1288
+stops in month 02	2812
+driver_age-19.0	1435
+is_arrested-false	40482
+search_conducted-true	959
+stop_date-nodata	10
+stops in month 03	3937
+driver_age-nodata	2827
+stops in month 04	3515
+contraband_found-false	44018
+driver_gender-f	12197
+stops	509681
+stops in month 05	3971
+bad-row	3283
+driver_race-nodata	2764
+out_of_state-false	31173
+stops in month 06	3656
+stops in month 07	3709
+stops in month 08	3993
+stops in month 09	3959
+violation-nodata	2764
+search_type-probable cause	429
+stop_outcome-arrest passenger	169
+driver_gender-m	29466
+drugs_related_stop-true	344
+county_name-nodata	44427
+driver_race-black	6367
+drugs_related_stop-false	44083
+search_type-incident to arrest	342
+search_type-protective frisk	19
+violation-moving violation	7700
+out_of_state-nodata	2869
+stops at hour 20	1796
+violation-seat belt	3865
+driver_age-80.0	10
+driver_race-asian	1049
+stop_outcome-citation	35838
+stop_outcome-no action	232
+stops at hour 10	3389
+stops at hour 21	635
+driver_age-70.0	64
+driver_age-81.0	8
+search_type-inventory	87
+stops at hour 00	2611
+stops at hour 11	2521
+stops at hour 22	2076
