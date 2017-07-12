@@ -1,0 +1,279 @@
+county_name-delta county	3909
+county_name-hinsdale county	16
+county_name-routt county	4733
+driver_age-60.0	3388
+driver_age-71.0	1131
+driver_age-82.0	270
+driver_age-93.0	3
+is_arrested-nodata	3
+out_of_state-true	62060
+stops at hour 01	4956
+stops at hour 12	15422
+stops at hour 23	11365
+vehicle_year-1984	177
+vehicle_year-1995	1971
+vehicle_year-2006	7025
+contraband_found-true	131
+county_name-phillips county	281
+county_name-saguache county	1375
+driver_age-50.0	5079
+driver_age-61.0	3181
+driver_age-72.0	956
+driver_age-83.0	140
+driver_age-94.0	1
+driver_gender-nodata	55113
+stops at hour 02	3204
+stops at hour 13	18799
+vehicle_year-1985	200
+vehicle_year-1996	2167
+vehicle_year-2007	7245
+driver_age-40.0	4913
+driver_age-51.0	5139
+driver_age-62.0	2890
+driver_age-73.0	858
+driver_age-84.0	28
+driver_age-95.0	1
+stop_outcome-nodata	90060
+stops at hour 03	1898
+stops at hour 14	19456
+vehicle_year-1986	268
+vehicle_year-1997	2748
+vehicle_year-2008	6583
+county_name-cheyenne county	611
+driver_age-30.0	5863
+driver_age-41.0	5089
+driver_age-52.0	4972
+driver_age-63.0	2612
+driver_age-74.0	774
+driver_age-85.0	34
+driver_race-white	216327
+is_arrested-true	1502
+search_conducted-false	319290
+stops at hour 04	1714
+stops at hour 15	19782
+vehicle_year-1987	297
+vehicle_year-1998	3072
+vehicle_year-2009	4098
+county_name-san juan county	43
+driver_age-20.0	6305
+driver_age-31.0	5809
+driver_age-42.0	5346
+driver_age-53.0	4882
+driver_age-64.0	2464
+driver_age-75.0	675
+driver_age-86.0	33
+stops at hour 05	3524
+stops at hour 16	18826
+vehicle_year-1988	397
+vehicle_year-1999	4011
+violation-speeding	119244
+county_name-gunnison county	3229
+county_name-jackson county	533
+county_name-montrose county	4935
+driver_age-21.0	6403
+driver_age-32.0	5609
+driver_age-43.0	5353
+driver_age-54.0	4560
+driver_age-65.0	2428
+driver_age-76.0	593
+driver_age-87.0	16
+driver_age-98.0	1
+out_of_state-na na na	3
+stops at hour 06	9590
+stops at hour 17	19187
+vehicle_year-1989	488
+violation-equipment	4715
+violation-vehicle had no number plates attached"	1
+county_name-denver county	675
+county_name-dolores county	472
+county_name-huerfano county	4153
+driver_age-22.0	6637
+driver_age-33.0	5514
+driver_age-44.0	5203
+driver_age-55.0	4437
+driver_age-66.0	2305
+driver_age-77.0	471
+driver_age-88.0	12
+driver_age-99.0	1
+stops at hour 07	16734
+stops at hour 18	16916
+violation-lights	22242
+county_name-logan county	5279
+county_name-moffat county	2672
+county_name-pitkin county	598
+driver_age-23.0	6611
+driver_age-34.0	5432
+driver_age-45.0	4701
+driver_age-56.0	4375
+driver_age-67.0	1755
+driver_age-78.0	428
+driver_age-89.0	10
+stops at hour 08	19294
+stops at hour 19	14145
+vehicle_year-nodata	212708
+violation-other	29193
+violation-other (non-mapped)	10436
+driver_age-24.0	6574
+driver_age-35.0	5198
+driver_age-46.0	4761
+driver_age-57.0	4133
+driver_age-68.0	1514
+driver_age-79.0	349
+search_type-nodata	319294
+stops at hour 09	19866
+driver_age-25.0	6242
+driver_age-36.0	4984
+driver_age-47.0	4636
+driver_age-58.0	3804
+driver_age-69.0	1474
+county_name-larimer county	12831
+driver_age-15.0	192
+driver_age-26.0	6092
+driver_age-37.0	4917
+driver_age-48.0	4846
+driver_age-59.0	3539
+driver_race-other	1
+stops in month 10	27478
+violation-registration/plates	19564
+county_name-boulder county	11044
+county_name-san miguel county	450
+driver_age-16.0	1625
+driver_age-27.0	5941
+driver_age-38.0	4955
+driver_age-49.0	4992
+driver_race-hispanic	30732
+stops in 2013	319624
+stops in month 11	26688
+county_name-grand county	4841
+county_name-montezuma county	3342
+county_name-washington county	2141
+county_name-yuma county	1581
+driver_age-17.0	3315
+driver_age-28.0	5932
+driver_age-39.0	4795
+stop_outcome-false	4
+stops in month 01	24542
+stops in month 12	27599
+county_name-conejos county	2658
+county_name-lake county	392
+county_name-sedgwick county	431
+driver_age-18.0	5470
+driver_age-29.0	5911
+stops in month 02	21998
+county_name-jefferson county	26249
+county_name-mineral county	2702
+driver_age-19.0	6078
+is_arrested-false	318118
+out_of_state-chevy silverado 2000	1
+search_conducted-true	330
+stop_date-nodata	1
+stops in month 03	28256
+county_name-clear creek county	6429
+county_name-crowley county	578
+county_name-summit county	7061
+driver_age-nodata	59695
+stops in month 04	24410
+violation-dui	238
+contraband_found-false	319489
+county_name-elbert county	2162
+driver_gender-f	83022
+search_conducted-other	3
+stops	2584744
+stops in month 05	28274
+bad-row	480599
+county_name-gilpin county	1602
+county_name-rio blanco county	1848
+driver_race-nodata	60117
+out_of_state-false	257400
+stops in month 06	26360
+county_name-alamosa county	4275
+county_name-el paso county	26581
+county_name-park county	6663
+stops in month 07	27630
+county_name-archuleta county	3685
+county_name-bent county	1081
+search_conducted-registration/plates	1
+stops in month 08	28848
+county_name-adams county	19973
+county_name-eagle county	10842
+county_name-kit carson county	1958
+county_name-ouray county	2336
+stops in month 09	27541
+violation-nodata	59940
+violation-paperwork	1339
+county_name-la plata county	8551
+drugs_related_stop-nodata	319624
+search_type-probable cause	126
+county_name-mesa county	13434
+county_name-weld county	13763
+violation-truck	6432
+county_name-costilla county	1866
+county_name-douglas county	11274
+county_name-fremont county	5350
+county_name-las animas county	5970
+county_name-pueblo county	11653
+driver_gender-m	181489
+county_name-morgan county	5269
+violation-license	793
+county_name-lincoln county	3141
+county_name-nodata	3
+driver_race-black	8328
+search_type-incident to arrest	15
+vehicle_year-2010	4487
+violation-safe movement	42341
+violation-stop sign/light	2396
+county_name-garfield county	8646
+vehicle_year-2000	4949
+vehicle_year-2011	5235
+county_name-otero county	3688
+county_name-rio grande county	2956
+vehicle_year-1990	683
+vehicle_year-2001	5121
+vehicle_year-2012	7351
+violation-other"	2
+county_name-chaffee county	6006
+county_name-custer county	63
+county_name-prowers county	3472
+is_arrested-citation	1
+stop_outcome-arrest	1502
+stop_outcome-written warning	45427
+vehicle_year-1980	77
+vehicle_year-1991	819
+vehicle_year-2002	5379
+vehicle_year-2013	8709
+violation-moving violation	355
+county_name-kiowa county	1273
+driver_age-90.0	2
+out_of_state-nodata	160
+search_type-consent	189
+stop_outcome-verbal warning	103944
+stops at hour 20	13933
+vehicle_year-1981	69
+vehicle_year-1992	899
+vehicle_year-2003	5680
+vehicle_year-2014	909
+violation-seat belt	392
+contraband_found-nodata	4
+county_name-teller county	2367
+driver_age-80.0	333
+driver_age-91.0	4
+driver_race-asian	4119
+stop_outcome-citation	78687
+stops at hour 10	19239
+stops at hour 21	14697
+vehicle_year-1982	85
+vehicle_year-1993	1122
+vehicle_year-2004	6219
+violation-pedestrian"	1
+county_name-arapahoe county	9661
+county_name-baca county	1385
+county_name-broomfield county	583
+driver_age-70.0	1337
+driver_age-81.0	290
+driver_age-92.0	3
+stops at hour 00	8020
+stops at hour 11	15250
+stops at hour 22	13807
+vehicle_year-1983	109
+vehicle_year-1994	1441
+vehicle_year-2005	6826

@@ -1,0 +1,221 @@
+driver_age-60.0	938
+driver_age-71.0	339
+driver_age-82.0	60
+driver_age-93.0	2
+out_of_state-true	19772
+search_type-warrant	5
+stops at hour 01	750
+stops at hour 12	2662
+stops at hour 23	1952
+county_name-liberty county	60
+county_name-meagher county	153
+county_name-phillips county	202
+driver_age-50.0	1240
+driver_age-61.0	879
+driver_age-72.0	285
+driver_age-83.0	56
+driver_age-94.0	5
+driver_gender-nodata	25
+stops at hour 02	427
+stops at hour 13	3677
+county_name-fallon county	112
+county_name-golden valley county	246
+driver_age-40.0	1143
+driver_age-51.0	1273
+driver_age-62.0	777
+driver_age-73.0	257
+driver_age-84.0	41
+driver_age-95.0	1
+stops at hour 03	39
+stops at hour 14	5131
+county_name-flathead county	4155
+county_name-mccone county	95
+driver_age-30.0	1329
+driver_age-41.0	1214
+driver_age-52.0	1271
+driver_age-63.0	744
+driver_age-74.0	239
+driver_age-85.0	36
+driver_race-white	59526
+is_arrested-true	942
+search_conducted-false	64138
+stops at hour 04	6
+stops at hour 15	6034
+county_name-cascade county	3318
+county_name-daniels county	141
+county_name-dawson county	2554
+driver_age-20.0	1537
+driver_age-31.0	1314
+driver_age-42.0	1248
+driver_age-53.0	1238
+driver_age-64.0	684
+driver_age-75.0	200
+driver_age-86.0	36
+stops at hour 05	57
+stops at hour 16	5238
+violation-speeding	46228
+county_name-missoula county	3790
+county_name-silver bow county	1692
+driver_age-21.0	1462
+driver_age-32.0	1225
+driver_age-43.0	1233
+driver_age-54.0	1159
+driver_age-65.0	645
+driver_age-76.0	181
+driver_age-87.0	25
+stop_outcome-warning	39081
+stops at hour 06	327
+stops at hour 17	4556
+violation-equipment	733
+county_name-wheatland county	292
+driver_age-22.0	1522
+driver_age-33.0	1286
+driver_age-44.0	1210
+driver_age-55.0	1120
+driver_age-66.0	620
+driver_age-77.0	149
+driver_age-88.0	23
+stops at hour 07	2484
+stops at hour 18	4298
+violation-lights	5990
+county_name-broadwater county	1219
+county_name-yellowstone county	4694
+driver_age-23.0	1512
+driver_age-34.0	1261
+driver_age-45.0	1138
+driver_age-56.0	1121
+driver_age-67.0	471
+driver_age-78.0	108
+driver_age-89.0	14
+stops at hour 08	3616
+stops at hour 19	3328
+violation-other	1219
+violation-other (non-mapped)	9
+county_name-lewis and clark county	2628
+county_name-wibaux county	138
+driver_age-24.0	1396
+driver_age-35.0	1239
+driver_age-46.0	1203
+driver_age-57.0	1088
+driver_age-68.0	425
+driver_age-79.0	119
+search_type-nodata	64138
+stops at hour 09	3492
+county_name-glacier county	820
+county_name-ravalli county	1918
+driver_age-25.0	1426
+driver_age-36.0	1205
+driver_age-47.0	1136
+driver_age-58.0	1052
+driver_age-69.0	411
+county_name-fergus county	727
+county_name-gallatin county	4213
+driver_age-15.0	165
+driver_age-26.0	1334
+driver_age-37.0	1132
+driver_age-48.0	1211
+driver_age-59.0	987
+driver_race-other	2008
+stops in month 10	5309
+vehicle_type-nodata	64171
+violation-registration/plates	2168
+county_name-petroleum county	54
+county_name-toole county	592
+driver_age-16.0	525
+driver_age-27.0	1315
+driver_age-38.0	1196
+driver_age-49.0	1187
+driver_race-hispanic	1220
+stops in 2013	64171
+stops in month 11	5155
+county_name-chouteau county	749
+driver_age-17.0	824
+driver_age-28.0	1296
+driver_age-39.0	1097
+stops in month 01	4962
+stops in month 12	3558
+county_name-lake county	1650
+county_name-stillwater county	1015
+county_name-treasure county	46
+driver_age-18.0	1371
+driver_age-29.0	1353
+stops in month 02	5018
+county_name-jefferson county	1579
+county_name-mineral county	1014
+driver_age-19.0	1526
+is_arrested-false	63229
+search_conducted-true	33
+stop_date-nodata	4
+stops in month 03	5372
+county_name-carbon county	666
+county_name-carter county	2
+county_name-deer lodge county	2196
+county_name-powell county	2224
+driver_age-nodata	499
+stops in month 04	4988
+violation-dui	135
+contraband_found-false	64138
+driver_gender-f	21293
+stops	825118
+stops in month 05	6252
+bad-row	388153
+driver_race-nodata	173
+out_of_state-false	44105
+stops in month 06	5995
+county_name-park county	2144
+county_name-sheridan county	422
+county_name-sweet grass county	411
+stops in month 07	5975
+county_name-blaine county	489
+stops in month 08	5752
+county_name-prairie county	111
+stops in month 09	5835
+violation-paperwork	70
+county_name-richland county	1605
+drugs_related_stop-nodata	64171
+search_type-probable cause	3
+county_name-granite county	561
+county_name-rosebud county	456
+county_name-sanders county	1103
+county_name-teton county	275
+violation-truck	87
+county_name-beaverhead county	914
+county_name-musselshell county	477
+county_name-powder river county	37
+driver_gender-m	42853
+violation-license	2176
+county_name-big horn county	634
+county_name-lincoln county	1753
+county_name-nodata	180
+county_name-pondera county	929
+driver_race-black	631
+violation-safe movement	3596
+violation-stop sign/light	1610
+county_name-garfield county	181
+county_name-hill county	1143
+county_name-custer county	2893
+stop_outcome-arrest	942
+stop_outcome-faulty equipment notice	211
+county_name-roosevelt county	985
+county_name-valley county	688
+driver_age-90.0	9
+out_of_state-nodata	294
+search_type-consent	25
+stops at hour 20	2910
+violation-seat belt	150
+contraband_found-nodata	33
+driver_age-80.0	95
+driver_age-91.0	1
+driver_race-asian	613
+stop_outcome-citation	23880
+stop_outcome-no action	57
+stops at hour 10	3793
+stops at hour 21	2678
+county_name-judith basin county	410
+county_name-madison county	416
+driver_age-70.0	394
+driver_age-81.0	78
+driver_age-92.0	5
+stops at hour 00	1067
+stops at hour 11	3171
+stops at hour 22	2478
