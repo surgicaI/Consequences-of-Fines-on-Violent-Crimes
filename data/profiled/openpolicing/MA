@@ -1,0 +1,152 @@
+county_name-essex county	32632
+driver_age-60.0	3357
+driver_age-71.0	883
+driver_age-82.0	155
+driver_age-93.0	6
+is_arrested-nodata	21
+out_of_state-true	42249
+contraband_found-true	2821
+county_name-bristol county	18512
+driver_age-50.0	6482
+driver_age-61.0	3017
+driver_age-72.0	646
+driver_age-83.0	142
+driver_age-94.0	19
+driver_gender-nodata	1253
+driver_age-40.0	6824
+driver_age-51.0	6165
+driver_age-62.0	2581
+driver_age-73.0	537
+driver_age-84.0	85
+driver_age-95.0	8
+stop_outcome-nodata	21
+driver_age-30.0	10827
+driver_age-41.0	7118
+driver_age-52.0	6038
+driver_age-63.0	2539
+driver_age-74.0	465
+driver_age-85.0	67
+driver_age-96.0	12
+driver_race-white	288239
+is_arrested-true	9903
+search_conducted-false	390833
+driver_age-20.0	9966
+driver_age-31.0	10399
+driver_age-42.0	7087
+driver_age-53.0	5795
+driver_age-64.0	2095
+driver_age-75.0	452
+driver_age-86.0	70
+driver_age-97.0	2
+violation-speeding	171915
+county_name-nantucket county	255
+driver_age-21.0	11562
+driver_age-32.0	9713
+driver_age-43.0	7378
+driver_age-54.0	5256
+driver_age-65.0	1964
+driver_age-76.0	361
+driver_age-87.0	50
+driver_age-98.0	3
+stop_outcome-warning	144900
+county_name-barnstable county	9024
+driver_age-22.0	13205
+driver_age-33.0	9345
+driver_age-44.0	7096
+driver_age-55.0	4872
+driver_age-66.0	1877
+driver_age-77.0	303
+driver_age-88.0	34
+driver_age-99.0	4
+county_name-hampden county	46943
+county_name-middlesex county	66829
+driver_age-23.0	14268
+driver_age-34.0	8801
+driver_age-45.0	7031
+driver_age-56.0	4808
+driver_age-67.0	1500
+driver_age-78.0	276
+driver_age-89.0	36
+driver_age-24.0	14251
+driver_age-35.0	8383
+driver_age-46.0	6648
+driver_age-57.0	4409
+driver_age-68.0	1260
+driver_age-79.0	235
+search_type-nodata	390841
+driver_age-25.0	14089
+driver_age-36.0	7825
+driver_age-47.0	6629
+driver_age-58.0	3924
+driver_age-69.0	1041
+driver_age-15.0	47
+driver_age-26.0	13493
+driver_age-37.0	7426
+driver_age-48.0	6820
+driver_age-59.0	3541
+driver_race-other	10213
+stops in month 10	33582
+vehicle_type-nodata	395791
+driver_age-16.0	172
+driver_age-27.0	12737
+driver_age-38.0	7268
+driver_age-49.0	6758
+driver_race-hispanic	41658
+stop_outcome-void	665
+stops in 2013	395791
+stops in month 11	29033
+county_name-suffolk county	71292
+driver_age-17.0	1585
+driver_age-28.0	12146
+driver_age-39.0	7016
+stops in month 01	37048
+stops in month 12	22605
+county_name-berkshire county	12816
+county_name-hampshire county	8508
+driver_age-18.0	4217
+driver_age-29.0	11463
+stops in month 02	29463
+county_name-worcester county	74961
+driver_age-19.0	7619
+is_arrested-false	385867
+search_conducted-true	4958
+stops in month 03	38226
+driver_age-nodata	19755
+stop_time-nodata	395791
+stops in month 04	32681
+contraband_found-false	392970
+county_name-dukes county	134
+driver_gender-f	121630
+stops	3418298
+stops in month 05	38490
+bad-row	52905
+driver_race-nodata	1343
+out_of_state-false	353258
+stops in month 06	35055
+county_name-plymouth county	15829
+stops in month 07	32294
+stops in month 08	33477
+stops in month 09	33837
+violation-nodata	205014
+drugs_related_stop-nodata	395791
+search_type-probable cause	2471
+driver_gender-m	272908
+county_name-nodata	431
+driver_race-black	41832
+search_type-incident to arrest	1392
+stop_outcome-criminal	26496
+search_type-protective frisk	364
+stop_outcome-arrest	9903
+stop_outcome-civil	213806
+county_name-franklin county	9868
+driver_age-90.0	27
+out_of_state-nodata	284
+search_type-consent	723
+violation-seat belt	18862
+driver_age-80.0	196
+driver_age-91.0	15
+driver_race-asian	12506
+county_name-norfolk county	27757
+driver_age-70.0	1004
+driver_age-81.0	197
+driver_age-92.0	13

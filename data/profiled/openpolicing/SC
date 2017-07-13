@@ -1,0 +1,187 @@
+county_name-laurens county	16868
+driver_age-60.0	6838
+driver_age-71.0	2600
+driver_age-82.0	493
+driver_age-93.0	17
+contraband_found-true	4307
+county_name-hampton county	4829
+driver_age-50.0	11690
+driver_age-61.0	6237
+driver_age-72.0	2169
+driver_age-83.0	393
+driver_age-94.0	6
+stop_outcome-felony arrest	580
+county_name-colleton county	9715
+county_name-fairfield county	8939
+driver_age-40.0	14084
+driver_age-51.0	11348
+driver_age-62.0	6077
+driver_age-73.0	1947
+driver_age-84.0	293
+driver_age-95.0	6
+driver_age-30.0	18888
+driver_age-41.0	14633
+driver_age-52.0	10931
+driver_age-63.0	5617
+driver_age-74.0	1773
+driver_age-85.0	297
+driver_age-96.0	9
+driver_race-white	465815
+is_arrested-true	16849
+search_conducted-false	744208
+county_name-marlboro county	4718
+county_name-mccormick county	1594
+county_name-williamsburg county	6535
+driver_age-20.0	24875
+driver_age-31.0	18599
+driver_age-42.0	15268
+driver_age-53.0	10128
+driver_age-64.0	5247
+driver_age-75.0	1464
+driver_age-86.0	206
+driver_age-97.0	2
+violation-speeding	172143
+county_name-berkeley county	18493
+driver_age-21.0	26105
+driver_age-32.0	18006
+driver_age-43.0	14404
+driver_age-54.0	9623
+driver_age-65.0	4956
+driver_age-76.0	1266
+driver_age-87.0	176
+driver_age-98.0	4
+stop_outcome-warning	296229
+violation-equipment	1386
+county_name-horry county	56758
+county_name-newberry county	12220
+county_name-orangeburg county	21933
+county_name-sumter county	14075
+driver_age-22.0	27260
+driver_age-33.0	17322
+driver_age-44.0	13538
+driver_age-55.0	9334
+driver_age-66.0	4938
+driver_age-77.0	1111
+driver_age-88.0	123
+driver_age-99.0	9
+violation-lights	648
+driver_age-23.0	26719
+driver_age-34.0	16594
+driver_age-45.0	12694
+driver_age-56.0	8963
+driver_age-67.0	3907
+driver_age-78.0	992
+driver_age-89.0	103
+violation-other	210869
+county_name-florence county	26900
+county_name-greenwood county	17815
+county_name-lexington county	29918
+county_name-saluda county	7875
+driver_age-24.0	25116
+driver_age-35.0	15669
+driver_age-46.0	12390
+driver_age-57.0	8146
+driver_age-68.0	3451
+driver_age-79.0	813
+search_type-nodata	762411
+county_name-oconee county	14922
+county_name-union county	5253
+driver_age-25.0	23138
+driver_age-36.0	15451
+driver_age-47.0	12456
+driver_age-58.0	7733
+driver_age-69.0	3187
+county_name-abbeville county	4074
+county_name-calhoun county	3643
+county_name-chester county	12769
+driver_age-15.0	1399
+driver_age-26.0	21945
+driver_age-37.0	14196
+driver_age-48.0	12649
+driver_age-59.0	7389
+driver_race-other	8315
+stops in month 10	62156
+vehicle_type-nodata	762411
+violation-registration/plates	2095
+county_name-georgetown county	12142
+driver_age-16.0	6057
+driver_age-27.0	21092
+driver_age-38.0	14413
+driver_age-49.0	12423
+driver_race-hispanic	27334
+stops in 2013	762411
+stops in month 11	62922
+county_name-aiken county	23048
+county_name-lee county	5335
+driver_age-17.0	11732
+driver_age-28.0	20376
+driver_age-39.0	14139
+stop_outcome-false	1
+stops in month 01	61005
+stops in month 12	62295
+county_name-charleston county	13191
+county_name-greenville county	61004
+county_name-york county	43810
+driver_age-18.0	19235
+driver_age-29.0	19112
+stops in month 02	54570
+county_name-anderson county	32107
+county_name-cherokee county	17474
+driver_age-19.0	22648
+is_arrested-false	745561
+search_conducted-true	18202
+stop_date-nodata	3
+stops in month 03	65979
+county_name-pickens county	17641
+driver_age-nodata	1186
+stop_time-nodata	762411
+stops in month 04	59125
+violation-dui	11807
+contraband_found-false	758103
+county_name-chesterfield county	8351
+driver_gender-f	278010
+search_conducted-other	1
+stops	8440934
+stops in month 05	68007
+bad-row	209293
+driver_race-nodata	267
+stops in month 06	61281
+county_name-bamberg county	4838
+county_name-marion county	7370
+stops in month 07	69515
+county_name-barnwell county	5823
+county_name-lancaster county	15152
+stops in month 08	69523
+county_name-darlington county	12211
+stops in month 09	66033
+violation-nodata	296237
+violation-paperwork	21
+county_name-dorchester county	14086
+county_name-kershaw county	15203
+county_name-richland county	50642
+drugs_related_stop-nodata	762411
+violation-truck	269
+driver_gender-m	484401
+county_name-allendale county	2815
+violation-license	50808
+county_name-nodata	15961
+driver_race-black	260680
+violation-etc. on highway"	1
+violation-safe movement	11565
+violation-stop sign/light	3210
+county_name-beaufort county	17683
+county_name-edgefield county	5898
+county_name-jasper county	8565
+is_arrested-citation	1
+stop_outcome-arrest	16269
+violation-moving violation	1352
+county_name-spartanburg county	52215
+driver_age-90.0	65
+out_of_state-nodata	762411
+contraband_found-nodata	1
+driver_age-80.0	727
+driver_age-91.0	41
+stop_outcome-citation	449332
+driver_age-70.0	3130
+driver_age-81.0	595
+driver_age-92.0	30

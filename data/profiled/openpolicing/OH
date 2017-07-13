@@ -1,0 +1,168 @@
+county_name-hamilton county	31624
+county_name-henry county	2281
+county_name-monroe county	497
+county_name-ottawa county	6769
+stops at hour 01	43494
+stops at hour 12	60797
+stops at hour 23	41972
+county_name-cuyahoga county	36109
+county_name-lawrence county	11504
+driver_gender-nodata	91864
+stops at hour 02	36592
+stops at hour 13	59021
+county_name-brown county	8358
+county_name-fairfield county	13152
+stop_outcome-nodata	602491
+stops at hour 03	20808
+stops at hour 14	46899
+driver_race-white	774775
+is_arrested-true	3552
+search_conducted-false	1006442
+stops at hour 04	12332
+stops at hour 15	54509
+county_name-butler county	20986
+county_name-preble county	7453
+county_name-vinton county	2933
+stops at hour 05	14059
+stops at hour 16	60791
+violation-speeding	310961
+county_name-hocking county	3572
+county_name-jackson county	13460
+county_name-lorain county	27520
+stop_outcome-warning	416483
+stops at hour 06	18710
+stops at hour 17	55562
+violation-equipment	3333
+county_name-fulton county	8774
+county_name-holmes county	1841
+county_name-mercer county	5141
+stops at hour 07	34822
+stops at hour 18	43201
+violation-lights	729
+county_name-athens county	11925
+county_name-belmont county	12522
+county_name-carroll county	1206
+county_name-clark county	9755
+county_name-columbiana county	10560
+county_name-logan county	5215
+stops at hour 08	49425
+stops at hour 19	39279
+violation-other	34748
+violation-other (non-mapped)	13749
+county_name-guernsey county	12801
+search_type-nodata	1017158
+stops at hour 09	57373
+county_name-darke county	1975
+county_name-defiance county	9167
+county_name-delaware county	17875
+county_name-pike county	4424
+county_name-shelby county	5622
+county_name-union county	6853
+county_name-warren county	20372
+county_name-champaign county	1408
+county_name-gallia county	11647
+driver_race-other	637
+stops in month 10	77530
+vehicle_type-nodata	1022526
+violation-registration/plates	7937
+county_name-scioto county	12456
+driver_race-hispanic	19525
+stops in 2013	1022526
+stops in month 11	76588
+county_name-hardin county	2507
+county_name-lucas county	29064
+county_name-medina county	15304
+county_name-sandusky county	21625
+county_name-washington county	11942
+county_name-williams county	10036
+stops in month 01	75499
+stops in month 12	67090
+county_name-ashtabula county	11217
+county_name-lake county	10741
+county_name-mahoning county	26511
+county_name-montgomery county	20029
+county_name-pickaway county	11506
+stops in month 02	68972
+county_name-allen county	14326
+county_name-jefferson county	10725
+is_arrested-false	1018974
+search_conducted-true	16084
+stops in month 03	80734
+county_name-hancock county	14322
+county_name-highland county	3378
+county_name-summit county	20628
+county_name-van wert county	6587
+county_name-wood county	19605
+driver_age-nodata	1022526
+stops in month 04	76541
+violation-dui	583
+contraband_found-false	1006442
+county_name-auglaize county	13691
+county_name-geauga county	6182
+county_name-knox county	6072
+driver_gender-f	306583
+stops	6165997
+stops in month 05	114422
+bad-row	358689
+county_name-putnam county	2216
+driver_race-nodata	96007
+stops in month 06	79658
+county_name-marion county	13834
+county_name-morrow county	10294
+county_name-tuscarawas county	10901
+county_name-wayne county	14030
+stops in month 07	102746
+county_name-clinton county	11328
+county_name-erie county	23190
+county_name-trumbull county	24058
+stops in month 08	107183
+county_name-adams county	3758
+county_name-huron county	9459
+county_name-perry county	1142
+stops in month 09	95563
+violation-nodata	534806
+violation-paperwork	2839
+county_name-richland county	18240
+county_name-seneca county	3801
+county_name-paulding county	5100
+county_name-ashland county	17509
+county_name-miami county	9842
+driver_gender-m	624079
+county_name-morgan county	713
+drugs_related_stop-true	2300
+violation-license	4901
+county_name-nodata	579
+driver_race-black	118456
+drugs_related_stop-false	1020226
+violation-cell phone	201
+violation-safe movement	20225
+violation-stop sign/light	9169
+county_name-coshocton county	1556
+county_name-fayette county	3185
+county_name-greene county	11652
+county_name-harrison county	4274
+county_name-portage county	22667
+county_name-licking county	16695
+county_name-meigs county	6420
+county_name-crawford county	9348
+stop_outcome-arrest	3552
+county_name-franklin county	38461
+out_of_state-nodata	1022526
+search_type-consent	1547
+search_type-k9 search	3821
+stops at hour 20	42109
+violation-seat belt	78345
+contraband_found-nodata	16084
+county_name-clermont county	20590
+county_name-muskingum county	12115
+county_name-noble county	1727
+county_name-wyandot county	8679
+driver_race-asian	13126
+stops at hour 10	60975
+stops at hour 21	36989
+county_name-madison county	13285
+county_name-ross county	11795
+county_name-stark county	16328
+stops at hour 00	47877
+stops at hour 11	53736
+stops at hour 22	31194

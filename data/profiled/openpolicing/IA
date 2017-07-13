@@ -1,0 +1,70 @@
+is_arrested-nodata	284801
+out_of_state-true	190215
+stops at hour 01	2929
+stops at hour 12	12874
+stops at hour 23	8590
+driver_gender-nodata	150510
+stops at hour 02	1940
+stops at hour 13	19114
+stops at hour 03	1309
+stops at hour 14	16916
+stops at hour 04	917
+stops at hour 15	18385
+stops at hour 05	1175
+stops at hour 16	24764
+violation-speeding	144022
+stop_outcome-warning	150211
+stops at hour 06	6572
+stops at hour 17	24016
+violation-equipment	8972
+driver_race-""	166410
+stops at hour 07	16783
+stops at hour 18	12353
+violation-lights	1233
+stops at hour 08	14748
+stops at hour 19	9385
+violation-other	1557
+violation-other (non-mapped)	29772
+search_type-nodata	284801
+stops at hour 09	15450
+stops in month 10	21878
+vehicle_type-nodata	284801
+violation-registration/plates	26218
+driver_race-hispanic	6664
+search_conducted-nodata	284801
+stops in 2013	284801
+stops in month 11	22910
+stops in month 01	20986
+stops in month 12	15637
+stops in month 02	21671
+stops in month 03	24988
+driver_age-nodata	284801
+stop_time-nodata	9
+stops in month 04	23504
+violation-dui	1065
+driver_gender-f	45719
+stops	2441335
+stops in month 05	24885
+bad-row	535727
+driver_race-nodata	111727
+out_of_state-false	94586
+stops in month 06	25134
+stops in month 07	30576
+stops in month 08	26990
+stops in month 09	25642
+violation-paperwork	40221
+drugs_related_stop-nodata	284801
+driver_gender-m	88572
+violation-license	8822
+county_name-nodata	284801
+violation-safe movement	6855
+violation-stop sign/light	2498
+stops at hour 20	13020
+violation-seat belt	13566
+contraband_found-nodata	284801
+stop_outcome-citation	134590
+stops at hour 10	19274
+stops at hour 21	13219
+stops at hour 00	4624
+stops at hour 11	14119
+stops at hour 22	12316

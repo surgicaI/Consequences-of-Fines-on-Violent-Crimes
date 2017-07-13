@@ -6,23 +6,23 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class ProfilerRunner {
+public class FBIDataETLRunner {
 public static void main(String[] args) throws Exception {
         if (args.length != 2) {
-                System.err.println("Usage: ProfilerRunner <input path> <output path>");
+                System.err.println("Usage: FBIDataETLRunner <input path> <output path>");
                 System.exit(-1);
         }
         Job job = new Job();
-        job.setJarByClass(ProfilerRunner.class);
-        job.setJobName("FBI data profiler");
+        job.setJarByClass(FBIDataETLRunner.class);
+        job.setJobName("FBI data ETL");
 
         job.setNumReduceTasks(1); // 1 Reduce task
 
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
-        job.setMapperClass(ProfilerMapper.class);
-        job.setReducerClass(ProfilerReducer.class);
+        job.setMapperClass(FBIDataETLMapper.class);
+        job.setReducerClass(FBIDataETLReducer.class);
 
         try{
             job.addFileToClassPath(new Path("/user/ssg441/lib/commons-csv-1.4.jar"));
