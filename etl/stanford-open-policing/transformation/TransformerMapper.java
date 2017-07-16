@@ -348,7 +348,7 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						String isArrested = "";
 						
 						if (kvMap.containsKey("is_arrested")) {
-							isArrested = kvMap.get("isArrested");
+							isArrested = kvMap.get("is_arrested");
 						}
 						
 						if (isArrested.contains("t") || isArrested.contains("y")) {
@@ -404,7 +404,7 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						aw.set(values);
-						context.write(new Text(kvMap.get("county_name")), aw);
+						context.write(new Text(config.get("state") + " " + kvMap.get("county_name")), aw);
 					}
 				}
 			}
