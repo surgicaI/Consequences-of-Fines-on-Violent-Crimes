@@ -17,17 +17,20 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 public class TransformerRunner {
 	
 	public static void main(String[] args) {
-		if (args.length != 2 && args.length != 3) {
+		if (args.length != 3 && args.length != 4) {
 			System.err.println("Incorrect program usage");
 			System.exit(1);
 		}
 		
-		String inputPath = args[args.length - 2];
-		String outputPath = args[args.length -1];
+		String inputPath = args[args.length - 3];
+		String outputPath = args[args.length - 2];
+		String state = args[args.length - 1];
+		
 		
 		try {
 			Configuration conf = new Configuration();
 			conf.set("headers", getHeaders(new Path("" + inputPath), conf));
+			conf.set("state", state);
 			
 			
 			Job job = new Job(conf);
