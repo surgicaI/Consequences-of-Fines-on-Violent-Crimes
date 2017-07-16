@@ -11,7 +11,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 public class FBIDataETLMapper extends Mapper<LongWritable, Text, Text, Text> {
 private static final int FBI_DATA_FIELDS = 24;
-private static final String[] match_tokens = {"police", "county", "sherrif", "department", "dept", "city"};
+private static final String[] match_tokens = {" of " , "police", "county", "sheriff", "department", "public", "safety", "dept", "city", "agency", "office", "parish"};
 
 @Override
 public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
