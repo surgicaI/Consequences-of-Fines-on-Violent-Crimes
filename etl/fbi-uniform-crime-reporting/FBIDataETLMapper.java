@@ -62,9 +62,11 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
             new_value = sbStr.toString();
         }else{
             new_value = "county:";
+            String delimiter = "$";
             String state = record.get(1).toUpperCase();
             String county = record.get(2).toLowerCase();
             String agency = record.get(3).toLowerCase();
+            String population = delimiter + record.get(35);
             if(state.equalsIgnoreCase("state")){
                 return;
             }
@@ -80,6 +82,7 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
                 new_key = new_key + "-" + agency_field;
             }
             new_value += county;
+            new_value += population;
         }
         context.write(new Text(new_key), new Text(new_value));
     }

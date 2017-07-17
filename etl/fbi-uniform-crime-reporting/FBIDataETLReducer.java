@@ -7,12 +7,14 @@ import java.lang.StringBuilder;
 public class FBIDataETLReducer extends Reducer<Text, Text, Text, Text> {
     @Override
     public void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+        String delimiter = "$";
         String separater = ",";
         String state = "";
         String agency = "";
         String county = "";
         String data = "";
         int num_values = 0;
+        String population = "";
         String key_string = key.toString();
         StringBuilder resultBuilder = new StringBuilder();
         resultBuilder.append(separater);
@@ -30,15 +32,28 @@ public class FBIDataETLReducer extends Reducer<Text, Text, Text, Text> {
                 }
             }
             if(value_string.startsWith("county:")) {
-                    county = value_string.substring(7);
+                int index_delimiter = value_string.indexOf(delimiter);
+                county = value_string.substring(7, index_delimiter);
+                population = value_string.substring(index_delimiter).replace(delimiter,"");
             }else if(value_string.startsWith("data:")) {
-                    data = value_string.substring(5);
+                data = value_string.substring(5);
             }
         }
         if(num_values == 2 && !data.isEmpty()) {
-            resultBuilder.append(county).append(separater);
-            // resultBuilder.append(agency).append(separater);
-            resultBuilder.append(data);
+            resultBuilder.append(county);
+            String[] data_tokens = data.split(separater);
+            int index = 0;
+            for(String token: data_tokens){
+                if(index == 2 && token.isEmpty()){
+                    token = population;
+                    if(token.contains(".")){
+                        int index_dot = token.indexOf(".");
+                        token = token.substring(0, index_dot);
+                    }
+                }
+                resultBuilder.append(separater).append(token);
+                index++;
+            }
             context.write(new Text(state), new Text(resultBuilder.toString()));
         }else if(num_values > 2 && !data.isEmpty()) {
             // Error
