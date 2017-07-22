@@ -18,7 +18,7 @@ public class MergerRunner {
 	private static final String[] states = new String[] { "AZ", "CA", "CO",
 			"CT", "FL", "IA", "IL", "MA", "MD", "MI", "MO", "MS", "MT", "NC",
 			"ND", "NE", "NH", "NJ", "NV", "OH", "OR", "RI", "SC", "SD", "TN",
-			"TX", "VA", "VA", "WA", "WI", "WY" };
+			"TX", "VA", "VT", "WA", "WI", "WY" };
 
 	public static void main(String[] args) {
 		if (args.length != 4 && args.length != 5) {
