@@ -13,9 +13,9 @@ public class TransformerReducer extends Reducer<Text, IntArrayWritable, Text, In
 	@Override
 	public void reduce(Text key, Iterable<IntArrayWritable> values, Context context) throws IOException, InterruptedException {
 		IntArrayWritable aw = new IntArrayWritable();
-		IntWritable[] arr = new IntWritable[181];
+		IntWritable[] arr = new IntWritable[185];
 		
-		for (int i = 0; i < 181; i++) {
+		for (int i = 0; i < 185; i++) {
 			arr[i] = new IntWritable(0);
 		}
 		

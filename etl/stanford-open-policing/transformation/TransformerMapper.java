@@ -19,7 +19,7 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
-public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWritable> {
+public class TransformerMapper extends Mapper<LongWritable, Text, Text, IntArrayWritable> {
 	
 	@Override
 	public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
@@ -34,14 +34,14 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 				
 				if (stopDate.contains("2013")) {
 					if (kvMap.containsKey("county_name")) {
-						ArrayWritable aw = new IntArrayWritable();
-						IntWritable[] values = new IntWritable[181];
+						IntArrayWritable aw = new IntArrayWritable();
+						IntWritable[] values = new IntWritable[185];
 						
-						for (int i = 0; i < 181; i++) {
+						for (int i = 0; i < 185; i++) {
 							values[i] = new IntWritable(0); //null causes errors
 						}
 						
-						int i = -1;
+						int i = 0;
 						
 						/*	
 						 * 	values[0]  ==  JAN
@@ -59,7 +59,7 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						 */
 						
 						int month = Integer.parseInt(stopDate.substring(5, 7));
-						values[i + month] = new IntWritable(1);
+						values[i + (month - 1)] = new IntWritable(1);
 						i += 12;
 						
 						/*
@@ -111,16 +111,20 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						if (gender.equals("m") || gender.equals("male")) {
-							values[i + 1] = new IntWritable(1);
+							values[i] = new IntWritable(1);
 						} else if (gender.equals("f") || gender.equals("female")) {
-							values[i + 2] = new IntWritable(1);
+							values[i + 1] = new IntWritable(1);
+						} else if ((gender.contains("ma") && !gender.contains("fe")) ||( gender.contains("man") && !gender.contains("wo"))) {
+							values[i] = new IntWritable(1);
 						} else if (gender.contains("fe") || gender.contains("wo")) {
-							values[i + 2] = new IntWritable(1);
+							values[i + 1] = new IntWritable(1);
 						} else {
-							values[i + 3] = new IntWritable(1);
+							values[i + 2] = new IntWritable(1);
 						}
 						
 						String race = "";
+						
+						i += 3;
 						
 						/*
 						 *   values[39]	==	White
@@ -137,15 +141,15 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						if (race.contains("w")) {
-							values[i + 1] = new IntWritable(1);
+							values[i] = new IntWritable(1);
 						} else if (race.contains("b")) {
-							values[i + 2] = new IntWritable(1);
+							values[i + 1] = new IntWritable(1);
 						} else if (race.contains("h")) {
-							values[i + 3] = new IntWritable(1);
+							values[i + 2] = new IntWritable(1);
 						} else if (race.contains("a")) {
-							values[i + 4] = new IntWritable(1);
+							values[i + 3] = new IntWritable(1);
 						} else {
-							values[i + 5] = new IntWritable(1);
+							values[i + 4] = new IntWritable(1);
 						}
 						
 						i += 5;
@@ -164,10 +168,10 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						 *  .
 						 *  .
 						 *  .
-						 *  values[113] ==	84 years old
-						 *  values[114] ==	85 years old
-						 *  values[115] ==	more than 85 years old
-						 *  values[116] ==	age unknown
+						 *  values[114] ==	84 years old
+						 *  values[115] ==	85 years old
+						 *  values[116] ==	more than 85 years old
+						 *  values[117] ==	age unknown
 						 */
 						
 						String age = "";
@@ -182,14 +186,14 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						i += 73;
 						
 						/*
-						 *	values[117] ==	car registered in 1980
-						 *	values[118] ==	car registered in 1981
+						 *	values[118] ==	car registered in 1980
+						 *	values[119] ==	car registered in 1981
 						 *	.
 						 *	.
 						 *	.
-						 *	values[150]	==	car registered in 2012
-						 *	values[151]	==	car registered in 2013
-						 *	values[152]	== 	car registered in 2014
+						 *	values[149]	==	car registered in 2012
+						 *	values[150]	==	car registered in 2013
+						 *	values[151]	== 	car registered in 2014
 						 *	values[153]	== 	registration year unknown
 						 */
 						
@@ -200,18 +204,18 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						values[i + getVehicleYear(vehicle)] = new IntWritable(1);
-						i += 36;
+						i += 37;
 						
 						
 						
 						/*
-						 *	values[153]	==	Speeding
-						 *	values[154]	==	DUI
-						 *	values[155]	==	License
-						 *	values[156]	==	Paperwork
-						 *	values[157]	==	Stop Sign / Traffic Light Violation
-						 *	values[158]	==	Safe Movement
-						 *	values[159]	==	Unknown/Other
+						 *	values[154]	==	Speeding
+						 *	values[155]	==	DUI
+						 *	values[156]	==	License
+						 *	values[157]	==	Paperwork
+						 *	values[158]	==	Stop Sign / Traffic Light Violation
+						 *	values[159]	==	Safe Movement
+						 *	values[160]	==	Unknown/Other
 						 */
 												
 						String violation  = "";
@@ -223,27 +227,27 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						if (violation.contains("speed")) {
-							values[i + 1] = new IntWritable(1);
+							values[i] = new IntWritable(1);
 						} else if (violation.contains("dui") || violation.contains("alcohol") || violation.contains("dwi")) {
-							values[i + 2] = new IntWritable(1);
+							values[i + 1] = new IntWritable(1);
 						} else if (violation.contains("license")) {
-							values[i + 3] = new IntWritable(1);
+							values[i + 2] = new IntWritable(1);
 						} else if (violation.contains("paper") || violation.contains("work")) {
-							values[i + 4] = new IntWritable(1);
+							values[i + 3] = new IntWritable(1);
 						} else if (violation.contains("sign") || violation.contains("stop") || violation.contains("traffic") || violation.contains("light")) {
-							values[i + 5] = new IntWritable(1);
+							values[i + 4] = new IntWritable(1);
 						} else if (violation.contains("safe") || violation.contains("movement")) {
-							values[i + 6] = new IntWritable(1);
+							values[i + 5] = new IntWritable(1);
 						} else {
-							values[i + 7] = new IntWritable(1);
+							values[i + 6] = new IntWritable(1);
 						}
 						
 						i += 7;
 						
 						/*
-						 * values[160]	== search conducted
-						 * values[161] 	== search not conducted
-						 * values[162] 	== unknown if search conducted
+						 * values[161]	== search conducted
+						 * values[162] 	== search not conducted
+						 * values[163] 	== unknown if search conducted
 						 */
 						
 						String searchConducted = "";
@@ -253,21 +257,21 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						if (searchConducted.contains("t") || searchConducted.contains("y")) {
-							values[i + 1] = new IntWritable(1);
+							values[i] = new IntWritable(1);
 						} else if (searchConducted.contains("f") || searchConducted.contains("n")) {
-							values[i + 2] = new IntWritable(1);
+							values[i + 1] = new IntWritable(1);
 						} else {
-							values[i + 3] = new IntWritable(1);
+							values[i + 2] = new IntWritable(1);
 						}
 						
 						i += 3;
 						
 						/*
-						 * values[163] 	== consented search
-						 * values[164] 	== k9
-						 * values[165]	== frisk
-						 * values[166]	== incident to arrest (warrantless search in times of arrest)
-						 * values[167]	== other / unknown search type
+						 * values[164] 	== consented search
+						 * values[165] 	== k9
+						 * values[166]	== frisk
+						 * values[167]	== incident to arrest (warrantless search in times of arrest)
+						 * values[168]	== other / unknown search type
 						 */
 						
 						String searchType = "";
@@ -279,23 +283,23 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						if (searchType.contains("consent")) {
-							values[i + 1] = new IntWritable(1);
+							values[i] = new IntWritable(1);
 						} else if (searchType.contains("k9") || searchType.contains("dog")) {
-							values[i + 2] = new IntWritable(1);
+							values[i + 1] = new IntWritable(1);
 						} else if (searchType.contains("frisk")) {
-							values[i + 3] = new IntWritable(1);
+							values[i + 2] = new IntWritable(1);
 						} else if (searchType.contains("arrest")) {
-							values[i + 4] = new IntWritable(1);
+							values[i + 3] = new IntWritable(1);
 						} else {
-							values[i + 5] = new IntWritable(1);
+							values[i + 4] = new IntWritable(1);
 						}
 						
 						i += 5;
 						
 						/*
-						 * values[168]	== contraband was found
-						 * values[169]	== contraband was not found
-						 * values[170]	== unknown whether or not contraband was found
+						 * values[169]	== contraband was found
+						 * values[170]	== contraband was not found
+						 * values[171]	== unknown whether or not contraband was found
 						 */
 						
 						String contrabandFound = "";
@@ -305,20 +309,20 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						if (contrabandFound.contains("t") || contrabandFound.contains("y")) {
-							values[i + 1] = new IntWritable(1);
+							values[i] = new IntWritable(1);
 						} else if (contrabandFound.contains("f") || contrabandFound.contains("n")) {
-							values[i + 2] = new IntWritable(1);
+							values[i + 1] = new IntWritable(1);
 						} else {
-							values[i + 3] = new IntWritable(1);
+							values[i + 2] = new IntWritable(1);
 						}
 						
 						i += 3;
 						
 						/*
-						 * values[171]	== verbal warning
-						 * values[172]	== written warning
-						 * values[173]	== arrest or citation
-						 * values[174]	== unknown
+						 * values[172]	== verbal warning
+						 * values[173]	== written warning
+						 * values[174]	== arrest or citation
+						 * values[175]	== unknown
 						 */
 						
 						String stopOutcome = "";
@@ -328,21 +332,21 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						if (stopOutcome.contains("verbal")) {
-							values[i + 1] = new IntWritable(1);
+							values[i] = new IntWritable(1);
 						} else if (stopOutcome.contains("written")) {
-							values[i + 2] = new IntWritable(1);
+							values[i + 1] = new IntWritable(1);
 						} else if (stopOutcome.contains("arrest") || stopOutcome.contains("citation")) {
-							values[i + 3] = new IntWritable(1);
+							values[i + 2] = new IntWritable(1);
 						} else {
-							values[i + 4] = new IntWritable(1);
+							values[i + 3] = new IntWritable(1);
 						}
 						
 						i += 4;
 						
 						/*
-						 * values[175]	==	was arrested
-						 * values[174]	==	was not arrested
-						 * values[174]	==	unknown if arrested
+						 * values[176]	==	was arrested
+						 * values[177]	==	was not arrested
+						 * values[178]	==	unknown if arrested
 						 */
 						
 						String isArrested = "";
@@ -352,19 +356,19 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						if (isArrested.contains("t") || isArrested.contains("y")) {
-							values[i + 1] = new IntWritable(1);
+							values[i] = new IntWritable(1);
 						} else if (isArrested.contains("f") || isArrested.contains("n")) {
-							values[i + 2] = new IntWritable(1);
+							values[i + 1] = new IntWritable(1);
 						} else {
-							values[i + 3] = new IntWritable(1);
+							values[i + 2] = new IntWritable(1);
 						}
 						
 						i += 3;
 						
 						/*
-						 * values[175]	==	vehicle was from a different state
-						 * values[176]	==	vehicle was from same state
-						 * values[177]	==	unknown which state the vehicle was from
+						 * values[179]	==	vehicle was from a different state
+						 * values[180]	==	vehicle was from same state
+						 * values[181]	==	unknown which state the vehicle was from
 						 */
 						
 						String outOfState = "";
@@ -374,19 +378,19 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						if (outOfState.contains("t") || outOfState.contains("y")) {
-							values[i + 1] = new IntWritable(1);
+							values[i] = new IntWritable(1);
 						} else if (outOfState.contains("f") || outOfState.contains("n")) {
-							values[i + 2] = new IntWritable(1);
+							values[i + 1] = new IntWritable(1);
 						} else {
-							values[i + 3] = new IntWritable(1);
+							values[i + 2] = new IntWritable(1);
 						}
 						
 						i += 3;
 						
 						/*
-						 * values[178]	==	stop is drugs related
-						 * values[179]	==	stop was not drugs related
-						 * values[180]	==	unknown whether the stop was drugs related
+						 * values[182]	==	stop is drugs related
+						 * values[183]	==	stop was not drugs related
+						 * values[184]	==	unknown whether the stop was drugs related
 						 */
 						
 						String drugsRelatedStop = "";
@@ -396,11 +400,11 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 						}
 						
 						if (drugsRelatedStop.contains("t") || drugsRelatedStop.contains("y")) {
-							values[i + 1] = new IntWritable(1);
+							values[i] = new IntWritable(1);
 						} else if (drugsRelatedStop.contains("f") || drugsRelatedStop.contains("n")) {
-							values[i + 2] = new IntWritable(1);
+							values[i + 1] = new IntWritable(1);
 						} else {
-							values[i + 3] = new IntWritable(1);
+							values[i + 2] = new IntWritable(1);
 						}
 						
 						aw.set(values);
@@ -425,11 +429,11 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 			int year = Integer.valueOf(yearMatcher.group(0));
 			
 			if (year >= 1980 && year <= 2014) {
-				return year - 1979;
+				return year - 1980;
 			}
 		}
 		
-		return 0;
+		return 36;
 	}
 
 
@@ -469,13 +473,13 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, ArrayWri
 		}
 		
 		if (age == 0) {
-			return 73;
-		} else if (age < 15) {
-			return 1;
-		} else if (age > 85) {
 			return 72;
+		} else if (age < 15) {
+			return 0;
+		} else if (age > 85) {
+			return 71;
 		} else {
-			return age - 13;
+			return age - 15;
 		}
 	}
 
