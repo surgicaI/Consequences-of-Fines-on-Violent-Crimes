@@ -16,6 +16,11 @@ public class TextArrayWritable extends ArrayWritable implements Cloneable {
 		super(Text.class);
 	} 
 	
+	
+	public int size() {
+		return get().length;
+		
+	}
 
 	@Override
 	public String toString() {
@@ -60,7 +65,7 @@ public class TextArrayWritable extends ArrayWritable implements Cloneable {
 			l.add((TextArrayWritable) i.next().clone());
 		}
 				
-		if (l.size() != 3) {
+		if (l.size() < 2 || l.size() > 3) {
 			return null;
 		}
 		
@@ -70,6 +75,14 @@ public class TextArrayWritable extends ArrayWritable implements Cloneable {
 				return o1.get().length - o2.get().length;
 			}
 		});
+		
+		if (l.get(0).size() > 10) { 
+			return null;
+		}
+		
+		if (l.get(1).size() > 100) {
+			return null;
+		}
 		
 		List<Writable> v = new ArrayList<>();
 		
@@ -92,6 +105,15 @@ public class TextArrayWritable extends ArrayWritable implements Cloneable {
 		clone.set(get().clone());
 		return clone;
 		
+	}
+
+
+	public static TextArrayWritable getAggregated(
+			Iterable<TextArrayWritable> values) {
+		
+		
+		
+		return null;
 	}
 
 }

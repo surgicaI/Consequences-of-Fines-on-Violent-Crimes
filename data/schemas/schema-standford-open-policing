@@ -1,0 +1,23 @@
+Schema:      The Stanford Open Policing Project
+
+Source:      Stanford
+
+Description: A collection of CSV files from around 30 states. Each file contains information about police stops in the respective state. Each row is a stop. The contents of the columns vary from state to state, but typically include information like the time and place of the stop, the reason for stopping, the demographic details of the driver who was stopped, and the outcome for the stop.
+
+Note:        The overall variance in the data reported from state to state is large. And profiling showed that oftentimes states have different ways of saying the same thing (for example, some states report birth-date, other states report age of driver at time of stop)
+
+The schema below is an example of a state that fully reports everything.
+===============================================================================
+
+stop date:		Text (String)
+stop time:		Text (String)
+stop location:		Text (String)
+driver race:		Text (String)
+driver gender:		Text (String)
+driver age:		Number (Integer)
+stop reason:		Text (String)
+search conducted:	Boolean
+search type:		Text (String) 
+contraband found:	Boolean
+stop outcome:		Text (String)
+vehicle type:		Text (String)

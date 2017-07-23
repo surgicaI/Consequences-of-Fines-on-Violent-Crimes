@@ -22,7 +22,6 @@ public class FBIMapper extends Mapper<LongWritable, Text, Text, TextArrayWritabl
 			}
 			
 			context.write(new Text(state + " " + county), TextArrayWritable.getFromOtherDatasets(values));
-			
 		}
 	}
 }

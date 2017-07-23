@@ -33,7 +33,7 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, IntArray
 				String stopDate = kvMap.get("stop_date");
 				
 				if (stopDate.contains("2013")) {
-					if (kvMap.containsKey("county_name")) {
+					if (kvMap.containsKey("county_name") || kvMap.containsKey("district")) {
 						IntArrayWritable aw = new IntArrayWritable();
 						IntWritable[] values = new IntWritable[185];
 						
@@ -407,8 +407,16 @@ public class TransformerMapper extends Mapper<LongWritable, Text, Text, IntArray
 							values[i + 2] = new IntWritable(1);
 						}
 						
+						String location = "";
+						
+						if (kvMap.containsKey("county_name")) {
+							location = kvMap.get("county_name");
+						} else if (kvMap.containsKey("district")) {
+							location = kvMap.get("district");
+						}
+						
 						aw.set(values);
-						context.write(new Text(config.get("state") + " " + kvMap.get("county_name")), aw);
+						context.write(new Text(config.get("state") + " " + location), aw);
 					}
 				}
 			}
