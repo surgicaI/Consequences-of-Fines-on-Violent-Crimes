@@ -1,0 +1,19 @@
+FBI Uniform Crime Reporting City Crime Data
+
+The FBI collects violent and property crime data from local and county police agencies, going back, in part, to
+the 1960s.
+
+State                                            Text(String)
+City                                             Text(String)
+Population                                       Number (Integer)
+Violent crime                                    Number (Integer)
+Murder and non-negligent manslaughter            Number (Integer)
+Rape (revised definition)1                       Number (Integer)
+Rape (Legacy definition)2                        Number (Integer)
+Robbery                                          Number (Integer)
+Aggravated assault                               Number (Integer)
+Property crime                                   Number (Integer)
+Burglary                                         Number (Integer)
+Larceny-theft                                    Number (Integer)
+Motor vehicle theft                              Number (Integer)
+Arson                                            Number (Integer)
