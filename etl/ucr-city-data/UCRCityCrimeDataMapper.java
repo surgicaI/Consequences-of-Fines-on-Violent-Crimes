@@ -11,7 +11,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 public class UCRCityCrimeDataMapper extends Mapper<LongWritable, Text, Text, Text> {
 private static final int FINES_DATA_FIELDS = 9;
-private static final String[] match_tokens = {" and ", "county", "borough", "town", "village", "municipality"};
+private static final String[] match_tokens = {" and ", "city", "county", "borough", "town", "village", "municipality"};
 
 @Override
 public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
@@ -32,17 +32,18 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
         }
         String new_key = "", new_value = "";
         if(record.size() <= FINES_DATA_FIELDS){
-            new_value = "";
-            String place = record.get(0);
+            String place = record.get(0).toLowerCase().trim();
             String state = record.get(1).toUpperCase();
             if(state.equalsIgnoreCase("state")){
                 return;
             }
-            new_key = state;
+            if(place.startsWith("county")){
+                return;
+            }
             for(String match_token: match_tokens){
                 place = place.replace(match_token,"");
             }
-            new_key = new_key + "," + place;
+            new_key = state + "," + place.trim();
             StringBuilder sbStr = new StringBuilder();
             sbStr.append("fines:");
             for(int i=2; i<record.size(); i++){
@@ -56,7 +57,7 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
             if(state.equalsIgnoreCase("state")){
                 return;
             }
-            new_key = state + "," + place;
+            new_key = state + "," + place.replace("city", "").trim();
 
             StringBuilder sbStr = new StringBuilder();
             sbStr.append("crime:");
