@@ -1,0 +1,24 @@
+impala-shell
+connect compute-1-1;
+
+create external table crimefine (state string ,city string, Population_2 float, population float, violent_crime float, murder float, rape_revised float, rape_legacy float, robbery float, assault float, property_crime float, burglary float, larceny float, vehicle_theft float, fines float, total_tax float, fines_to_tax float, fines_per_capita float, tax_per_capita float)
+row format delimited fields terminated by ','
+location '/user/ssg441/merged-city-crime-fines-data/';
+
+DESCRIBE crimefine;
+
+INSERT OVERWRITE DIRECTORY '/user/ssg441/merged-city-crime-fines-data/output'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT state,
+population,
+crime,
+fines,
+crime * 100000 / population AS crime_per_capita,
+fines * 100000 / population AS fines_per_capita
+FROM (
+    SELECT state,sum(population) AS population, sum(violent_crime) AS crime, sum(fines) AS fines
+    FROM crimefine
+    GROUP BY state
+) sub_crimefine;
