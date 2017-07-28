@@ -1,0 +1,105 @@
+CREATE EXTERNAL TABLE stops(state string, year int, stops int, white int, black int, hispanic int, asian int, white_contraband int, black_contraband int, hispanic_contraband int, asian_contraband int, contraband_missing int, white_searched int, black_searched int, hispanic_searched int, asian_searched int, searched_missing int)
+	row format delimited fields terminated by ','
+	location '/user/cloudera/project/data/race-extracted';
+
+CREATE EXTERNAL TABLE demographics(state string, population int, hispanic int, nothispanic int, white int, black int, asian int)
+	row format delimited fields terminated by ','
+	location '/user/cloudera/project/data/demographics';
+
+
+CREATE EXTERNAL TABLE stops2 AS
+SELECT 
+	* 
+FROM 
+	stops
+WHERE 
+	year = 2013 
+	OR
+	(state = "nh" AND year=2014)
+	OR
+	(state = "wy" AND year=2012);
+	
+CREATE EXTERNAL TABLE demo2 AS
+SELECT
+	state,
+	population,
+	(white - hispanic) AS 'white',
+	black,
+	hispanic,
+	asian
+FROM
+	demographics;
+
+
+CREATE EXTERNAL TABLE demo_percent AS
+SELECT
+	state,
+	ROUND((demo2.white / demo2.population) * 100) AS 'white',
+	ROUND((demo2.black / demo2.population) * 100) AS 'black',
+	ROUND((demo2.hispanic / demo2.population) * 100) AS 'hispanic',
+	ROUND((demo2.asian / demo2.population) * 100) AS 'asian'
+FROM
+	demo2;
+
+
+CREATE EXTERNAL TABLE stops_race_percent AS
+SELECT
+	state,
+	ROUND((white / stops) * 100) AS 'white',
+	ROUND((black / stops) * 100) AS 'black',
+	ROUND((hispanic / stops) * 100) AS 'hispanic',
+	ROUND((asian / stops) * 100) AS 'asian'
+FROM
+	stops2;
+
+CREATE EXTERNAL TABLE black_pullover AS	
+SELECT
+	demo_percent.state,
+	ROUND((stops_race_percent.black / demo_percent.black), 2) AS 'pulled_over'
+FROM
+	demo_percent,
+	stops_race_percent
+WHERE
+	demo_percent.state = stops_race_percent.state
+	AND
+	demo_percent.black > 0
+ORDER BY (stops_race_percent.black / demo_percent.black) DESC;
+
+CREATE EXTERNAL TABLE searched_adjustments AS
+SELECT
+	state,
+	stops,
+	searched_missing,
+	ROUND((searched_missing / stops) * 100, 2) AS adjustment
+FROM
+	stops2
+WHERE
+	(searched_missing / stops) * 100 < 15;
+
+
+CREATE TABLE stops_searched AS	
+SELECT
+	stops2.state,
+	ROUND(white_searched + ((white_searched / 100) * adjustment)) AS 'white',
+	ROUND(black_searched + ((black_searched / 100) * adjustment)) AS 'black',
+	ROUND(asian_searched + ((asian_searched / 100) * adjustment)) AS 'asian',
+	ROUND(hispanic_searched + ((hispanic_searched / 100) * adjustment)) AS 'hispanic'
+FROM
+	stops2,
+	searched_adjustments
+WHERE
+	stops2.state = searched_adjustments.state
+	AND
+	adjustment < 15;
+	
+SELECT
+	stops2.state,
+	((stops_searched.white / stops2.white) * 10000) AS 'white',
+	((stops_searched.black / stops2.black) * 10000) AS 'black',
+	((stops_searched.asian / stops2.asian) * 10000) AS 'asian',
+	((stops_searched.hispanic / stops2.hispanic) * 10000) AS 'hispanic'
+FROM
+	stops2,
+	stops_searched
+WHERE
+	stops2.state = stops_searched.state;

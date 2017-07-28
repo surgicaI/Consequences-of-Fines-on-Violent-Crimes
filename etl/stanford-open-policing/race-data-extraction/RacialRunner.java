@@ -12,7 +12,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 public class RacialRunner {
 	
 	private static final String[] states = new String[] { "az", "ca", "co",
-		"ct", "fl", "ia", "il", "ma", "md", "mi", "mo", "ms", "mt", "nc",
+		"ct", "fl", "ma", "md", "mi", "mo", "ms", "mt", "nc",
 		"nd", "ne", "nh", "nj", "nv", "oh", "or", "ri", "sc", "sd", "tn",
 		"tx", "va", "vt", "wa", "wi", "wy" };
 	
@@ -29,6 +29,7 @@ public class RacialRunner {
 		try {			
 			Configuration conf = new Configuration();
 			conf.set("inputPath", inputPath);
+			conf.set("mapreduce.output.textoutputformat.separator", ",");
 			Job job = Job.getInstance(conf);
 			job.setJarByClass(RacialRunner.class);
 			job.setJobName("open policing racial data extractor");
