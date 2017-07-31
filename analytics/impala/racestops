@@ -6,7 +6,6 @@ CREATE EXTERNAL TABLE demographics(state string, population int, hispanic int, n
 	row format delimited fields terminated by ','
 	location '/user/cloudera/project/data/demographics';
 
-
 CREATE EXTERNAL TABLE stops2 AS
 SELECT 
 	* 
@@ -19,51 +18,23 @@ WHERE
 	OR
 	(state = "wy" AND year=2012);
 	
-CREATE EXTERNAL TABLE demo2 AS
+CREATE EXTERNAL TABLE black_demo_ratio AS
 SELECT
 	state,
 	population,
-	(white - hispanic) AS 'white',
 	black,
-	hispanic,
-	asian
+	(black / population) AS 'ratio'
 FROM
 	demographics;
 
-
-CREATE EXTERNAL TABLE demo_percent AS
+CREATE EXTERNAL TABLE black_stops_ratio AS
 SELECT
 	state,
-	ROUND((demo2.white / demo2.population) * 100) AS 'white',
-	ROUND((demo2.black / demo2.population) * 100) AS 'black',
-	ROUND((demo2.hispanic / demo2.population) * 100) AS 'hispanic',
-	ROUND((demo2.asian / demo2.population) * 100) AS 'asian'
-FROM
-	demo2;
-
-
-CREATE EXTERNAL TABLE stops_race_percent AS
-SELECT
-	state,
-	ROUND((white / stops) * 100) AS 'white',
-	ROUND((black / stops) * 100) AS 'black',
-	ROUND((hispanic / stops) * 100) AS 'hispanic',
-	ROUND((asian / stops) * 100) AS 'asian'
+	stops,
+	black,
+	(black / stops) AS 'ratio'
 FROM
 	stops2;
-
-CREATE EXTERNAL TABLE black_pullover AS	
-SELECT
-	demo_percent.state,
-	ROUND((stops_race_percent.black / demo_percent.black), 2) AS 'pulled_over'
-FROM
-	demo_percent,
-	stops_race_percent
-WHERE
-	demo_percent.state = stops_race_percent.state
-	AND
-	demo_percent.black > 0
-ORDER BY (stops_race_percent.black / demo_percent.black) DESC;
 
 CREATE EXTERNAL TABLE searched_adjustments AS
 SELECT
@@ -77,13 +48,13 @@ WHERE
 	(searched_missing / stops) * 100 < 15;
 
 
-CREATE TABLE stops_searched AS	
+CREATE TABLE stops_searched_adjusted AS	
 SELECT
 	stops2.state,
-	ROUND(white_searched + ((white_searched / 100) * adjustment)) AS 'white',
-	ROUND(black_searched + ((black_searched / 100) * adjustment)) AS 'black',
-	ROUND(asian_searched + ((asian_searched / 100) * adjustment)) AS 'asian',
-	ROUND(hispanic_searched + ((hispanic_searched / 100) * adjustment)) AS 'hispanic'
+	white_searched + ROUND((white_searched / 100) * adjustment) AS 'white',
+	black_searched + ROUND((black_searched / 100) * adjustment) AS 'black',
+	asian_searched + ROUND((asian_searched / 100) * adjustment) AS 'asian',
+	hispanic_searched + ROUND((hispanic_searched / 100) * adjustment) AS 'hispanic'
 FROM
 	stops2,
 	searched_adjustments
@@ -91,15 +62,79 @@ WHERE
 	stops2.state = searched_adjustments.state
 	AND
 	adjustment < 15;
-	
+
+CREATE TABLE searched_ratios AS
 SELECT
 	stops2.state,
-	((stops_searched.white / stops2.white) * 10000) AS 'white',
-	((stops_searched.black / stops2.black) * 10000) AS 'black',
-	((stops_searched.asian / stops2.asian) * 10000) AS 'asian',
-	((stops_searched.hispanic / stops2.hispanic) * 10000) AS 'hispanic'
+	stops_searched_adjusted.white + stops_searched_adjusted.black + stops_searched_adjusted.asian + stops_searched_adjusted.hispanic AS 'general_searched',
+	stops AS 'general_stops',
+	(stops_searched_adjusted.white + stops_searched_adjusted.black + stops_searched_adjusted.asian + stops_searched_adjusted.hispanic) / stops AS 'general_ratio',
+	stops_searched_adjusted.black AS 'black_searched',
+	stops2.black AS 'black_stops',
+	stops_searched_adjusted.black / stops2.black AS 'black_ratio'
 FROM
 	stops2,
-	stops_searched
+	stops_searched_adjusted
 WHERE
-	stops2.state = stops_searched.state;
+	stops2.state = stops_searched_adjusted.state;
+
+CREATE TABLE black_search_score AS
+SELECT
+	state,
+	black_ratio,
+	general_ratio,
+	black_ratio / general_ratio AS 'score'
+FROM
+	searched_ratios
+WHERE
+	black_ratio > 0;
+
+CREATE TABLE black_stop_score AS
+SELECT
+	black_stops_ratio.state,
+	black_stops_ratio.ratio / black_demo_ratio.ratio AS 'score'
+FROM
+	black_stops_ratio,
+	black_demo_ratio
+WHERE
+	black_stops_ratio.state = black_demo_ratio.state;
+
+CREATE TABLE black_searched_odds AS
+SELECT
+	black_stop_score.state,
+	black_stop_score.score AS 'black_stop_score',
+	black_search_score.score AS 'black_search_score',
+	black_stop_score.score * black_search_score.score AS 'answer'
+FROM
+	black_stop_score,
+	black_search_score
+WHERE
+	black_stop_score.state = black_search_score.state;
+
+
+
+SELECT
+	stops2.state,
+	black_searched_odds.black_stop_score,
+	black_searched_odds.black_search_score,
+	(white_contraband + black_contraband + hispanic_contraband + asian_contraband) / (stops_searched_adjusted.white + stops_searched_adjusted.black + stops_searched_adjusted.asian + stops_searched_adjusted.hispanic) AS 'general_contraband’,
+	black_contraband / stops_searched_adjusted.black AS 'black_contraband’
+FROM
+	stops2,
+	demographics,
+	black_searched_odds,
+	stops_searched_adjusted
+WHERE
+	stops2.state = demographics.state
+	AND
+	stops2.state = black_searched_odds.state
+	AND
+	black_searched_odds.state = demographics.state
+	AND
+	stops2.state = stops_searched_adjusted.state
+	AND
+	black_searched_odds.state = stops_searched_adjusted.state
+	AND
+	demographics.state = stops_searched_adjusted.state
+	AND
+	(white_contraband + black_contraband + hispanic_contraband + asian_contraband) > 1000;
