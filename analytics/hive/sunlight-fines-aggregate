@@ -1,0 +1,35 @@
+beeline
+!connect jdbc:hive2://babar.es.its.nyu.edu:10000/
+
+create external table finestable (place string ,state string, population float, fines_forfeits float, total_tax float, fines_to_tax float, tax_per_capita float, fines_per_capita float)
+row format delimited fields terminated by ','
+location '/user/ssg441/sunlight-fines-data/';
+
+DESCRIBE finestable;
+
+INSERT OVERWRITE DIRECTORY '/user/ssg441/sunlight-fines-data/output'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT sub_finestable_1.state,
+population_city,
+population_county,
+fines_city,
+fines_city * 100000 / population_city AS fines_per_capita_city,
+fines_county,
+fines_county * 100000 / population_county AS fines_per_capita_county,
+(fines_city * 100000 / population_city) + (fines_county * 100000 / population_county) AS fines_per_capita
+FROM (
+    SELECT state,sum(population) AS population_city, sum(fines_forfeits) AS fines_city
+    FROM finestable
+    WHERE place LIKE 'city%'
+    GROUP BY state
+) sub_finestable_1
+JOIN
+(
+    SELECT state,sum(population) AS population_county, sum(fines_forfeits) AS fines_county
+    FROM finestable
+    WHERE place LIKE 'county%'
+    GROUP BY state
+) sub_finestable_2
+ON sub_finestable_1.state = sub_finestable_2.state;

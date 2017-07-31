@@ -1,0 +1,22 @@
+beeline
+!connect jdbc:hive2://babar.es.its.nyu.edu:10000/
+
+create external table citycrime (state string ,city string, population float, violent_crime float, murder float, rape_revised float, rape_legacy float, robbery float, assault float, property_crime float, burglary float, larceny float, vehicle_theft float, arson float)
+row format delimited fields terminated by ','
+location '/user/ssg441/ucr-city-data-cleaned/';
+
+DESCRIBE citycrime;
+
+INSERT OVERWRITE DIRECTORY '/user/ssg441/ucr-city-data-cleaned/output'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT state,
+population,
+crime,
+crime * 100000 / population AS crime_per_capita
+FROM (
+    SELECT state,sum(population) AS population, sum(violent_crime) AS crime
+    FROM citycrime
+    GROUP BY state
+) sub_citycrime;
