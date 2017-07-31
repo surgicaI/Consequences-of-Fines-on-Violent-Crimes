@@ -1,0 +1,42 @@
+beeline
+!connect jdbc:hive2://babar.es.its.nyu.edu:10000/
+
+create external table aggregatefinestable (state string, population_city float, population_county float, fines_city float, fines_per_capita_city float, fines_county float, fines_per_capita_county float, fines_per_capita float)
+row format delimited fields terminated by ','
+location '/user/ssg441/sunlight-fines-data-aggregate/';
+
+DESCRIBE aggregatefinestable;
+
+create external table aggregatecrimetable (state string, population float, crime float, crime_per_capita float)
+row format delimited fields terminated by ','
+location '/user/ssg441/ucr-crime-data-aggregate/';
+
+DESCRIBE aggregatecrimetable;
+
+create external table aggregateunemploymenttable (state string, unemployment_rate float, rank float)
+row format delimited fields terminated by ','
+location '/user/ssg441/unemployment-data-aggregate/';
+
+DESCRIBE aggregateunemploymenttable;
+
+INSERT OVERWRITE DIRECTORY '/user/ssg441/crime-fines-unemployment-data-combined/'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT aggregatefinestable.state,
+population,
+crime,
+crime_per_capita,
+population_city,
+population_county,
+fines_city,
+fines_per_capita_city,
+fines_county,
+fines_per_capita_county,
+fines_per_capita,
+unemployment_rate
+FROM aggregatefinestable
+JOIN aggregatecrimetable
+ON lower(aggregatefinestable.state) = lower(aggregatecrimetable.state)
+JOIN aggregateunemploymenttable
+ON lower(aggregatefinestable.state) = lower(aggregateunemploymenttable.state);
