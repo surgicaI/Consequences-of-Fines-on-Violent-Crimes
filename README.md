@@ -1,5 +1,10 @@
 # Potential Consequences of Fines on Violent Crimes
 
+## Authors
+- [Simranjyot Singh Gill](https://github.com/x-surgical-x)
+- [Samuel Smith](https://github.com/samuelsmithhk)
+- [Kedar Gangopadhyay](https://github.com/kqg13)
+
 ## Abstract
 Inspired by the **Ferguson, Missouri (MI) riots of 2014**, this project analyzes and discusses the dependence of city and county revenue generated from fines and forfeitures (primarily traffic violations) and their potential effects on the incidence of violent crimes. The analysis is done on an aggregated state level and concerns the calendar year 2013 only. It is based on five data sets, of which three required extensive Extract, Transform, and Load (“ETL”) processes. Although further research is required to more fully explain violent crime, the paper finds a positive linear relationship between fines and violent crimes at the state level. It also offer reasons why this may be true by looking at the rate of searches, stops, and contraband found in seven states.
 
